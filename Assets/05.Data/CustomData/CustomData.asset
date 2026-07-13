@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8352a1225bdbd4c88a6d07968e0b4c, type: 3}
+  m_Name: CustomData
+  m_EditorClassIdentifier: Assembly-CSharp::CustomData
+  hairs:
+  - hairID: {fileID: 4392715099631159871, guid: 4a4dfefd7f5e15642b002afa39fc5144, type: 3}
+    offset: {x: 1, y: 0.1000004}
+  - hairID: {fileID: 8149231595075593563, guid: 2dfce16d07020074ca210a36ecc3c30b, type: 3}
+    offset: {x: 4.274499, y: 6.108}
+  - hairID: {fileID: 2956117744787592119, guid: be1e4a4b1027cc44fbc74529197096bd, type: 3}
+    offset: {x: -1.1, y: -0.7155}
+  - hairID: {fileID: 6059840472925800720, guid: d577ad39952cf2b4e800a46317322c69, type: 3}
+    offset: {x: -1.4354, y: -6.2579}
+  hairColors:
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.961617, g: 1, b: 0, a: 0}
+  - {r: 0.004714012, g: 1, b: 0, a: 0}
+  - {r: 0, g: 0.032014847, b: 1, a: 0}
+  - {r: 1, g: 0, b: 0.7109165, a: 0}
