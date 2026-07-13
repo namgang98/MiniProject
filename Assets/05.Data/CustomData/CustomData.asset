@@ -22,7 +22,7 @@ MonoBehaviour:
   - hairID: {fileID: 6059840472925800720, guid: d577ad39952cf2b4e800a46317322c69, type: 3}
     offset: {x: 1.6, y: -2.5}
   hairColors:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0.961617, g: 1, b: 0, a: 1}
   - {r: 0.004714012, g: 1, b: 0, a: 1}

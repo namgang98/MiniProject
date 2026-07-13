@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InnManager : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class InnManager : MonoBehaviour
     [SerializeField] GameObject mercenaryPrefab;
     [SerializeField] MercenaryRandomTable randomTable;
 
+    [SerializeField] GameObject townPanel;
+    [SerializeField] GameObject innPanel;
+    [SerializeField] Button outBtn;
 
     bool isSpawn = false;
 
@@ -40,4 +44,11 @@ public class InnManager : MonoBehaviour
         }
         isSpawn = false;
     }
+
+    public void OutInn()
+    {
+        innPanel.SetActive(false);
+        townPanel.SetActive(true);
+    }
+
 }
