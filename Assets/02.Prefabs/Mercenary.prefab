@@ -46,10 +46,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7952998593903947551}
+  - component: {fileID: 159195835291623592}
   - component: {fileID: 2143402836784887668}
   - component: {fileID: 2037808407682977}
   - component: {fileID: 2726652970534911068}
-  - component: {fileID: 159195835291623592}
   m_Layer: 5
   m_Name: Mercenary
   m_TagString: Untagged
@@ -78,6 +78,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 71.9663, y: 174.9447}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159195835291623592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461020833249958168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef9d957717403e4f80404ad56e4a90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MercenaryCustomizing
+  customData: {fileID: 11400000, guid: 1ec998e97e057cd43b1f60869dc68c55, type: 2}
+  hairpos: {fileID: 7942721457220822261}
 --- !u!114 &2143402836784887668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,20 +155,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &159195835291623592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461020833249958168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef9d957717403e4f80404ad56e4a90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MercenaryCustomizing
-  customData: {fileID: 11400000, guid: 1ec998e97e057cd43b1f60869dc68c55, type: 2}
-  hairpos: {fileID: 7942721457220822261}
 --- !u!1 &3168889869743935221
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomData
   hairs:
   - hairID: {fileID: 4392715099631159871, guid: 4a4dfefd7f5e15642b002afa39fc5144, type: 3}
-    offset: {x: 1, y: 0.1000004}
+    offset: {x: 3.9, y: 4.5}
   - hairID: {fileID: 8149231595075593563, guid: 2dfce16d07020074ca210a36ecc3c30b, type: 3}
     offset: {x: 4.274499, y: 6.108}
   - hairID: {fileID: 2956117744787592119, guid: be1e4a4b1027cc44fbc74529197096bd, type: 3}
-    offset: {x: -1.1, y: -0.7155}
+    offset: {x: 2.1, y: 3.1}
   - hairID: {fileID: 6059840472925800720, guid: d577ad39952cf2b4e800a46317322c69, type: 3}
-    offset: {x: -1.4354, y: -6.2579}
+    offset: {x: 1.6, y: -2.5}
   hairColors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.961617, g: 1, b: 0, a: 0}
-  - {r: 0.004714012, g: 1, b: 0, a: 0}
-  - {r: 0, g: 0.032014847, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.7109165, a: 0}
+  - {r: 0.961617, g: 1, b: 0, a: 1}
+  - {r: 0.004714012, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0.032014847, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.7109165, a: 1}
