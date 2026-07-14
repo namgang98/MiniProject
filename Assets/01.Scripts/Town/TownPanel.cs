@@ -13,12 +13,6 @@ public class TownPanel : MonoBehaviour
     [SerializeField] GameObject dungeunPanel;
 
     MercenaryRandomTable mertable;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
     
     public void OpenInn()
     {

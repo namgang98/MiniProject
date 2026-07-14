@@ -20,6 +20,6 @@ public class merDatamanger : MonoBehaviour
 
     public void OpenInfo()
     {
-        PopupManager.instance.OpenMerInfoPanel(data);
+        PopupManager.instance.OpenMerInfoPanel(this);
     }
 }

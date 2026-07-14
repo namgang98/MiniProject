@@ -581,6 +581,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284484631}
   m_CullTransparentMesh: 1
+--- !u!1 &529413678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529413680}
+  - component: {fileID: 529413679}
+  m_Layer: 0
+  m_Name: MercenaryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &529413679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529413678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe19914b8e5b0834ca3826c5cb1546e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MercenaryManager
+  haveMerList: []
+  party:
+  - uniqueID: 0
+    name: 
+    level: 0
+    exp: 0
+    hp: 0
+    maxHp: 0
+    str: 0
+    intel: 0
+    dex: 0
+    hairNum: 0
+    hairColorNum: 0
+  - uniqueID: 0
+    name: 
+    level: 0
+    exp: 0
+    hp: 0
+    maxHp: 0
+    str: 0
+    intel: 0
+    dex: 0
+    hairNum: 0
+    hairColorNum: 0
+  - uniqueID: 0
+    name: 
+    level: 0
+    exp: 0
+    hp: 0
+    maxHp: 0
+    str: 0
+    intel: 0
+    dex: 0
+    hairNum: 0
+    hairColorNum: 0
+  - uniqueID: 0
+    name: 
+    level: 0
+    exp: 0
+    hp: 0
+    maxHp: 0
+    str: 0
+    intel: 0
+    dex: 0
+    hairNum: 0
+    hairColorNum: 0
+--- !u!4 &529413680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529413678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 664.9948, y: 436.7348, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837085938
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +1002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PopupManager
   option: {fileID: 2788032445506200818, guid: 9743e02899f8ec540aba743ae37743c7, type: 3}
   merInfo: {fileID: 5087745746974471969, guid: a4f708cd5a32c0a47adc69401f1abd89, type: 3}
+  falsePop: {fileID: 6699080998497928679, guid: c53b1cf35dbfa0f4b84f3533e090bed4, type: 3}
+  menuPop: {fileID: 8128512753834124030, guid: b716798f294760d4299f40a7f98c3d22, type: 3}
+  merlistpop: {fileID: 3690130919099188500, guid: 758f4a6b18839bb4f80558093d54b870, type: 3}
 --- !u!4 &1836918194
 Transform:
   m_ObjectHideFlags: 0
@@ -1039,5 +1132,6 @@ SceneRoots:
   - {fileID: 1836918194}
   - {fileID: 1530784002}
   - {fileID: 1127748359}
+  - {fileID: 529413680}
   - {fileID: 1931297893}
   - {fileID: 228036560}
