@@ -39,6 +39,7 @@ public class InnManager : MonoBehaviour
         {
             foreach ( Transform chaild in spawnPos[i])
             {
+                if (spawnPos[i] != null)
                 Destroy(chaild.gameObject);
             }
         }
@@ -48,8 +49,8 @@ public class InnManager : MonoBehaviour
     public void OutInn()
     {
         innPanel.SetActive(false);
-        SoundManager.instance.PlayBGM(BGMType.townBGM);
         townPanel.SetActive(true);
+        SoundManager.instance.PlayBGM(BGMType.townBGM);
     }
 
 }

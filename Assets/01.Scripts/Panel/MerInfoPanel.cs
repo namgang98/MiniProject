@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,18 +14,20 @@ public class MerInfoPanel : MonoBehaviour
     public TextMeshProUGUI intText;
     public TextMeshProUGUI dexText;
 
+    private merDatamanger currentManger;
     private Mercenary currentmerdata;
 
-    public void SetData(Mercenary data)
+    public void SetData(merDatamanger manger)
     {
-        nameText.text = data.name;
-        lVText.text = data.level.ToString();
+        currentManger = manger;
+        currentmerdata = manger.data;
+
+        nameText.text = currentmerdata.name;
+        lVText.text = currentmerdata.level.ToString();
     
-        strText.text = data.str.ToString();
-        intText.text = data.intel.ToString();
-        dexText.text = data.dex.ToString();
-            
-        currentmerdata = data;
+        strText.text = currentmerdata.str.ToString();
+        intText.text = currentmerdata.intel.ToString();
+        dexText.text = currentmerdata.dex.ToString();
     }
 
     public void CloseBtn()
@@ -35,10 +37,25 @@ public class MerInfoPanel : MonoBehaviour
 
     public void EmployBtn()
     {
-       // List<>
+        
+        if(MercenaryManager.instance.AddMercenary(currentmerdata))
+        {
+            PopupManager.instance.CloseMerInfoBtn();
+            Destroy(currentManger.gameObject);
+        }
+        else
+       {
+            StartCoroutine(EmployfalsePopup());
+
+       }
     }
 
-
-
+    IEnumerator EmployfalsePopup()
+    {
+        PopupManager.instance.OpenfalsePop();
+        yield return new WaitForSeconds(3);
+        PopupManager.instance.CloseFalsePop();
+    }
+    
 
 }

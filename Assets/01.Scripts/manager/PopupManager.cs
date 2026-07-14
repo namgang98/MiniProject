@@ -14,6 +14,9 @@ public class PopupManager : MonoBehaviour
     [SerializeField] GameObject merInfo;
     GameObject merInfoPanel;
 
+    [SerializeField] GameObject falsePop;
+    GameObject falsePanel;
+
     private void Awake()
     {
         if (instance == null)
@@ -46,7 +49,7 @@ public class PopupManager : MonoBehaviour
     #endregion
 
     #region 용병inn고용창 나중에 던전들어갈때 생성된거 파괴하고새로생성코드만들기
-    public void OpenMerInfoPanel(Mercenary Data)
+    public void OpenMerInfoPanel(merDatamanger manager)
     {
         if (merInfoPanel == null)
             merInfoPanel = Instantiate(merInfo, uiCanvas.transform);
@@ -57,7 +60,7 @@ public class PopupManager : MonoBehaviour
         dim.transform.SetAsLastSibling();
         merInfoPanel.transform.SetAsLastSibling();
 
-        merInfoPanel.GetComponent<MerInfoPanel>().SetData(Data);
+        merInfoPanel.GetComponent<MerInfoPanel>().SetData(manager);
     }
     public void CloseMerInfoBtn()
     {
@@ -65,7 +68,19 @@ public class PopupManager : MonoBehaviour
         dim.SetActive(false);
     }
     #endregion
+    public void OpenfalsePop()
+    {
+        if(falsePanel == null)
+            falsePanel = Instantiate(falsePop, uiCanvas.transform);
+        else
+            falsePanel.SetActive(true);
 
+        falsePanel.transform.SetAsLastSibling();
+    }
+    public void CloseFalsePop()
+    {
+        falsePanel.SetActive(false);
+    }
 
 
     public void SetCanvas(Canvas canvas)

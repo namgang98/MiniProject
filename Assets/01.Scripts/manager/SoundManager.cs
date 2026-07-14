@@ -43,7 +43,6 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         SetBgmVolume(PlayerPrefs.GetFloat("BGMVolume", 1));
-        PlayBGM(BGMType.mainBGM);
     }
 
     public void PlayBGM(BGMType type)
