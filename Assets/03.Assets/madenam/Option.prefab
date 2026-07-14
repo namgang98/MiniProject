@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5323, y: 128.77338}
+  m_AnchoredPosition: {x: -178, y: 76}
   m_SizeDelta: {x: 72.4198, y: 24.9767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8206353842273005559
@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 2881270910104726376}
   - component: {fileID: 2652508505966683313}
   - component: {fileID: 8666261582596781237}
+  - component: {fileID: 1208773538938625748}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -303,6 +304,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1208773538938625748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788032445506200818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629dd225af96ee44d81fe3eb654b734f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptionPanel
+  closeBtn: {fileID: 2649389977586215912}
+  bgmSlider: {fileID: 3344329191293774588}
+  sfxSlider: {fileID: 4538179990806810787}
 --- !u!1 &2792545135377796221
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,8 +525,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -793,8 +809,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -5,8 +5,8 @@ public class PopupManager : MonoBehaviour
 {
     public static PopupManager instance;
 
-    [SerializeField] Canvas uiCanvas;
-    [SerializeField ]GameObject dim;
+    Canvas uiCanvas;
+    GameObject dim;
 
     [SerializeField] GameObject option;
     GameObject optionPanel;
@@ -25,7 +25,7 @@ public class PopupManager : MonoBehaviour
 
     #region 옵션판낼코드
     public void OpenOptionPanel()
-    {      
+    {
         if (optionPanel == null)
         {
             optionPanel = Instantiate(option, uiCanvas.transform);
@@ -35,8 +35,8 @@ public class PopupManager : MonoBehaviour
             optionPanel.SetActive(true);
         }
         dim.SetActive(true);
-        dim.transform.SetAsLastSibling(); 
-        optionPanel.transform.SetAsLastSibling();  
+        dim.transform.SetAsLastSibling();
+        optionPanel.transform.SetAsLastSibling();
     }
     public void CloseOptionBtn()
     {
@@ -45,7 +45,7 @@ public class PopupManager : MonoBehaviour
     }
     #endregion
 
-    #region 용병inn고용창
+    #region 용병inn고용창 나중에 던전들어갈때 생성된거 파괴하고새로생성코드만들기
     public void OpenMerInfoPanel(Mercenary Data)
     {
         if (merInfoPanel == null)
@@ -66,5 +66,15 @@ public class PopupManager : MonoBehaviour
     }
     #endregion
 
+
+
+    public void SetCanvas(Canvas canvas)
+    {
+        uiCanvas = canvas;
+    }
+    public void SetDim(GameObject dim)
+    {
+        this.dim = dim;
+    }
 
 }

@@ -11,25 +11,25 @@ public class OptionPanel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       // bgmSlider.onValueChanged.AddListener(BGMVolumeChange);
+        bgmSlider.onValueChanged.AddListener(BGMVolumeChange);
        // sfxSlider.onValueChanged.AddListener(SFXVolumeChange);
         closeBtn.onClick.AddListener(PopupManager.instance.CloseOptionBtn);
     }
-    //private void OnEnable()
-    //{
-    //    bgmSlider.value = SoundManager.instance.GetBGMvolume();
-    //    sfxSlider.value = SoundManager.instance.GetSFXvolume();
-    //}
-    //
-    //public void BGMVolumeChange(float vol)
-    //{
-    //    SoundManager.instance.SetBgmVolume(vol);
-    //}
-    //public void SFXVolumeChange(float vol)
-    //{
-    //    SoundManager.instance.SetSFXVolume(vol);
-    //}
-    //
+    private void OnEnable()
+    {
+        bgmSlider.value = SoundManager.instance.GetBgmVolume();
+        //sfxSlider.value = SoundManager.instance.GetSFXvolume();
+    }
+    
+    public void BGMVolumeChange(float vol)
+    {
+        SoundManager.instance.SetBgmVolume(vol);
+    }
+   // public void SFXVolumeChange(float vol)
+   // {
+   //     SoundManager.instance.SetSFXVolume(vol);
+   // }
+   // 
 
 
 }

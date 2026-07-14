@@ -48,6 +48,7 @@ public class InnManager : MonoBehaviour
     public void OutInn()
     {
         innPanel.SetActive(false);
+        SoundManager.instance.PlayBGM(BGMType.townBGM);
         townPanel.SetActive(true);
     }
 

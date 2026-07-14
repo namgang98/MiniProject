@@ -23,6 +23,7 @@ public class TownPanel : MonoBehaviour
     public void OpenInn()
     {
         townPanel.SetActive(false);
+        SoundManager.instance.PlayBGM(BGMType.innBGM);
         innPanel.SetActive(true);
     }
 }
