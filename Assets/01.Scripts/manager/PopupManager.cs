@@ -113,7 +113,7 @@ public class PopupManager : MonoBehaviour
     public void OpenMerListPopup()
     {
         if (merlistpanel == null)
-            merlistpanel = Instantiate(merlistpanel,uiCanvas.transform);
+            merlistpanel = Instantiate(merlistpop,uiCanvas.transform);
         else
             merlistpanel.SetActive(true);
             
