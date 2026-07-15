@@ -7,10 +7,6 @@ public class InnManager : MonoBehaviour
     [SerializeField] GameObject mercenaryPrefab;
     [SerializeField] MercenaryRandomTable randomTable;
 
-    [SerializeField] GameObject townPanel;
-    [SerializeField] GameObject innPanel;
-    [SerializeField] Button outBtn;
-
     bool isSpawn = false;
 
     private void OnEnable()
@@ -45,12 +41,4 @@ public class InnManager : MonoBehaviour
         }
         isSpawn = false;
     }
-
-    public void OutInn()
-    {
-        innPanel.SetActive(false);
-        townPanel.SetActive(true);
-        SoundManager.instance.PlayBGM(BGMType.townBGM);
-    }
-
 }

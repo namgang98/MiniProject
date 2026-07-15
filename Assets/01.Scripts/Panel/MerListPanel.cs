@@ -15,6 +15,11 @@ public class MerListPanel : MonoBehaviour
 
     void Refresh()
     {
+        foreach(Transform child in conten)
+        {
+            Destroy(child.gameObject);
+        }
+
         foreach(Mercenary mer in MercenaryManager.instance.haveMerList)
         {
             GameObject slot = Instantiate(merSlot, conten);

@@ -6,10 +6,17 @@ public class Mercenary
 {
     public int uniqueID;
     public string name;
+    public int totalStr;
+    public int totalInt;
+    public int totalDex;
+
     public int level;
     public int exp;
+    public int statpoint;
+
     public int hp;
     public int maxHp;
+
     public int str;
     public int intel;
     public int dex;
@@ -22,8 +29,12 @@ public class Mercenary
         this.uniqueID = uniqueID;
         this.name = name;
 
+        this.totalStr = str; //+ weapon.str + armor.str;
+        this.totalInt = intel;
+        this.totalDex = dex;
         this.level = 1;
         this.exp = 0;
+        this.statpoint = 0;
         this.maxHp = 100;
         this.hp = maxHp;
 

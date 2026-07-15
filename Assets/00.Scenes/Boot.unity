@@ -250,7 +250,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -614,8 +614,12 @@ MonoBehaviour:
   party:
   - uniqueID: 0
     name: 
+    totalStr: 0
+    totalInt: 0
+    totalDex: 0
     level: 0
     exp: 0
+    statpoint: 0
     hp: 0
     maxHp: 0
     str: 0
@@ -625,8 +629,12 @@ MonoBehaviour:
     hairColorNum: 0
   - uniqueID: 0
     name: 
+    totalStr: 0
+    totalInt: 0
+    totalDex: 0
     level: 0
     exp: 0
+    statpoint: 0
     hp: 0
     maxHp: 0
     str: 0
@@ -636,8 +644,12 @@ MonoBehaviour:
     hairColorNum: 0
   - uniqueID: 0
     name: 
+    totalStr: 0
+    totalInt: 0
+    totalDex: 0
     level: 0
     exp: 0
+    statpoint: 0
     hp: 0
     maxHp: 0
     str: 0
@@ -647,8 +659,12 @@ MonoBehaviour:
     hairColorNum: 0
   - uniqueID: 0
     name: 
+    totalStr: 0
+    totalInt: 0
+    totalDex: 0
     level: 0
     exp: 0
+    statpoint: 0
     hp: 0
     maxHp: 0
     str: 0
@@ -1004,7 +1020,8 @@ MonoBehaviour:
   merInfo: {fileID: 5087745746974471969, guid: a4f708cd5a32c0a47adc69401f1abd89, type: 3}
   falsePop: {fileID: 6699080998497928679, guid: c53b1cf35dbfa0f4b84f3533e090bed4, type: 3}
   menuPop: {fileID: 8128512753834124030, guid: b716798f294760d4299f40a7f98c3d22, type: 3}
-  merlistpop: {fileID: 3690130919099188500, guid: 758f4a6b18839bb4f80558093d54b870, type: 3}
+  merListpop: {fileID: 3690130919099188500, guid: 758f4a6b18839bb4f80558093d54b870, type: 3}
+  merStatPop: {fileID: 3398925057570865091, guid: 3a29208c354a9c742a58c1d7907e2ba2, type: 3}
 --- !u!4 &1836918194
 Transform:
   m_ObjectHideFlags: 0
