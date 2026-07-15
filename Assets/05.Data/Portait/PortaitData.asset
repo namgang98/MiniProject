@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PortaitData
   m_EditorClassIdentifier: Assembly-CSharp::PortaitData
   Portaits:
-  - portait: {fileID: 8002440007688778139, guid: 50f1c4c8dc3ecc446a1bf1cc5a203bc4, type: 3}
+  - portait: {fileID: 6174448129783322928, guid: d5ef7e167fa7aa042a12e20eb5eeec7a, type: 3}
     offset: {x: -0.3, y: -1.3}
   - portait: {fileID: 5935992552703975110, guid: 33bbdb61a42e72743b943e152c9829c7, type: 3}
     offset: {x: -0.3, y: -1.3}
-  - portait: {fileID: 6174448129783322928, guid: d5ef7e167fa7aa042a12e20eb5eeec7a, type: 3}
+  - portait: {fileID: 8002440007688778139, guid: 50f1c4c8dc3ecc446a1bf1cc5a203bc4, type: 3}
     offset: {x: -0.3, y: -1.3}
   - portait: {fileID: 4537267049932848972, guid: b4b4297ec39232d4fa1a2f08fc2abe8b, type: 3}
     offset: {x: -0.3, y: -1.3}
