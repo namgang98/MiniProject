@@ -16,7 +16,7 @@ public class TownPopcontroller : MonoBehaviour
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject dungeunPanel;
     
-    [SerializeField] Canvas enCanvas;
+    [SerializeField] GameObject enCanvas;
     [SerializeField] Canvas uiCanvas;
 
     public void InnIN()
