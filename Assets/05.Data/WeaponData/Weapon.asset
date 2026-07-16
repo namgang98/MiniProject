@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8042a3ec3fed64382f92c1a2cc13ef, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  weapons: []
+  weapons:
+  - weapons: 0
+    skills: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+    grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}
+  - weapons: 1
+    skills: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+    grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}
+  - weapons: 2
+    skills: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+    grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}
+  - weapons: 3
+    skills: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+    grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}
+  - weapons: 4
+    skills: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+    grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}

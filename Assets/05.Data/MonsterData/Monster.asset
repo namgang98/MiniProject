@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bee880d497fa3d4f84b4c3641a238f9, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: Assembly-CSharp::MonsterData
-  monsterList: []
+  monsterList:
+  - id: 1001
+    name: Slime
+    hp: 50
+    gold: 100
+    dex: 3
+  - id: 1001
+    name: KingSlime
+    hp: 100
+    gold: 9999
+    dex: 5

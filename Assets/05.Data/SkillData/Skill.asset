@@ -12,3 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bd222bfe54b0f4482775b4b4c2445b, type: 3}
   m_Name: Skill
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skills:
+  - id: 101
+    name: Slash
+    damage: 10
+  - id: 102
+    name: Piercing Thrust
+    damage: 8
+  - id: 103
+    name: Crescent Slash
+    damage: 20
+  - id: 104
+    name: Tempest Strike
+    damage: 999
