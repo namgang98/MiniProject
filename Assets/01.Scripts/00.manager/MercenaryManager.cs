@@ -82,6 +82,18 @@ public class MercenaryManager : MonoBehaviour
             party[i] = null;
         }
     }
+    public int PartyCount()
+    {
+        int count = 0;
+
+        for(int i = 0; i < party.Length; i++)
+        {
+            if (party[i] != null)
+                count++;
+        }
+
+        return count;
+    }
     #endregion
 
 }

@@ -5,7 +5,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class PopupManager : MonoBehaviour
 {
     public static PopupManager instance;
-    #region 
+    #region ¸É¹ö
     Canvas uiCanvas;
     Canvas enCanvas;
     GameObject dim;
@@ -27,6 +27,12 @@ public class PopupManager : MonoBehaviour
 
     [SerializeField] GameObject merStatPop;
     GameObject merStatPanel;
+
+    [SerializeField] GameObject PartysZeroPop;
+    GameObject PartysZeroPanel;
+
+    [SerializeField] GameObject NotFourPop;
+    GameObject NotFourPanel;
     #endregion
     private void Awake()
     {
@@ -103,11 +109,35 @@ public class PopupManager : MonoBehaviour
     {
         merStatPanel = CreatePanel(merStatPanel,merStatPop);
         Openpanel(merStatPanel, uiCanvas, 1);
-        merStatPanel.GetComponent<merlistinfoPanel>().SetData(mer);          
+        merStatPanel.GetComponent<MerListInfoPanel>().SetData(mer);          
     }
     public void CloseMerStatPanel()
     {
         Closepanel(merStatPanel, enCanvas,2);
+    }
+    #endregion
+
+    #region ÆÄÆ¼¿ø¾øÀ»½Ã ¶ß´Â ÆË¾÷
+    public void OpenPartysZeroPop()
+    {
+        PartysZeroPanel = CreatePanel(PartysZeroPanel,PartysZeroPop);
+        Openpanel(PartysZeroPanel,uiCanvas,1);
+    }
+    public void ClosePartysZeroPanel()
+    {
+        Closepanel(PartysZeroPanel,enCanvas, 3);
+    }
+    #endregion
+
+    #region ÆÄÆ¼¿ø 4¸íÀÌÇÏÀÏ½Ã ¶ß´Â ÆË¾÷
+    public void OpenPartysNotFourPop()
+    {
+        NotFourPanel = CreatePanel(NotFourPanel, NotFourPop);
+        Openpanel(NotFourPanel,uiCanvas,1);
+    }
+    public void ClosePartysNotFourPanel()
+    {
+        Closepanel(NotFourPanel,enCanvas,3);
     }
     #endregion
 
@@ -119,7 +149,7 @@ public class PopupManager : MonoBehaviour
 
         return panel;
     }
-    public void Openpanel(GameObject panel, Canvas canvas,int i)
+    public void Openpanel(GameObject panel, Canvas canvas,int i) // °Á 1³ÖÀ¸¸éµÊ
     {
         ChangeParent(panel, canvas);
         panel.SetActive(true);
@@ -127,7 +157,7 @@ public class PopupManager : MonoBehaviour
         setdimpos(i);
         panel.transform.SetAsLastSibling();
     }
-    public void Closepanel(GameObject panel, Canvas canvas,int i)
+    public void Closepanel(GameObject panel, Canvas canvas,int i) // Ã³À½¿©´Â ÆË¾÷ÀÏ°æ¿ì 3 ±×´ÙÀ½ ÄÑ´ÂÆË¾÷ 2
     {
         panel.SetActive(false);
         ChangeParent(panel, canvas);

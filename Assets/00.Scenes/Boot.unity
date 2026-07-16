@@ -1022,6 +1022,8 @@ MonoBehaviour:
   menuPop: {fileID: 8128512753834124030, guid: b716798f294760d4299f40a7f98c3d22, type: 3}
   merListpop: {fileID: 3690130919099188500, guid: 758f4a6b18839bb4f80558093d54b870, type: 3}
   merStatPop: {fileID: 3398925057570865091, guid: 3a29208c354a9c742a58c1d7907e2ba2, type: 3}
+  PartysZeroPop: {fileID: 4877760007188503951, guid: c0987f784a081ad4993caa7b14c9589a, type: 3}
+  NotFourPop: {fileID: 1160497547797720820, guid: 430f18dadeb13a545954f6fe161c5123, type: 3}
 --- !u!4 &1836918194
 Transform:
   m_ObjectHideFlags: 0
