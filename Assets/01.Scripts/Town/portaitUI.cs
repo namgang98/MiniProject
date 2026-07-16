@@ -21,4 +21,11 @@ public class portaitUI : MonoBehaviour
         Image image = por.transform.Find("Hair").GetComponent<Image>();
         image.color = customData.hairColors[mer.hairColorNum];
     }
+    public void Clear()
+    {
+        foreach (Transform child in porpos)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 }

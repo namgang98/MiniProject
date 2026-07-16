@@ -349,7 +349,7 @@ MonoBehaviour:
   mainBGMClip: {fileID: 8300000, guid: ca4f2e982dd1e534f850fa65f807463f, type: 3}
   townBGMClip: {fileID: 8300000, guid: eab3e731d52b41f459affaeb2e076fe9, type: 3}
   innBGMClip: {fileID: 8300000, guid: 6541b4f15fa266d41970f21b3d955ba8, type: 3}
-  dungeunBGMClip: {fileID: 0}
+  dungeunBGMClip: {fileID: 8300000, guid: 2509a865a9d9fdf4aa707d7b159d4826, type: 3}
 --- !u!4 &8885131
 Transform:
   m_ObjectHideFlags: 0

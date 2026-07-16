@@ -26,9 +26,10 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Town");
         SoundManager.instance.PlayBGM(BGMType.townBGM);
     }
-    public void Dungeun()
+    public void Explore()
     {
         SceneManager.LoadScene("Dungeun");
+        SoundManager.instance.PlayBGM(BGMType.dungeunBGM);
     }
 
 

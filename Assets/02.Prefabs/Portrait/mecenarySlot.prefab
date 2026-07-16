@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MercenarySlot
   portaitUI: {fileID: 5929837390805065449}
-  openstatBTN: {fileID: 0}
+  openstatBTN: {fileID: 691535320221313734}
 --- !u!114 &5929837390805065449
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class MercenarySlot : MonoBehaviour
 {
     [SerializeField] portaitUI portaitUI;
     [SerializeField] Button openstatBTN;
+
     Mercenary saveData;
 
     public void SetData(Mercenary mer)
