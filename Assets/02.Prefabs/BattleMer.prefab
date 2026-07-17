@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 159195835291623592}
   - component: {fileID: 2037808407682977}
   - component: {fileID: 2726652970534911068}
+  - component: {fileID: 4135306621722785960}
   m_Layer: 5
   m_Name: BattleMer
   m_TagString: Untagged
@@ -205,6 +206,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4135306621722785960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461020833249958168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df32f74cacd50ef4da380833b049c8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleMercenary
+  hpBar: {fileID: 8042085054012743494}
 --- !u!1 &3168889869743935221
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2671816793326265638}
   - component: {fileID: 3225936834152348013}
+  - component: {fileID: 8042085054012743494}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -577,6 +592,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8042085054012743494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6406496558141711364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c997dbf2192636e4dac9916d7a48c369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HpBar
 --- !u!1 &8296939906057304331
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class MainBTNAdder : MonoBehaviour
 
     private void Start()
     {
-        startBtn.onClick.AddListener(SceneChanger.Instance.GameStart);
+        startBtn.onClick.AddListener(SceneChanger.Instance.Town);
         exitBtn.onClick.AddListener(SceneChanger.Instance.ExitGame);
         optionBtn.onClick.AddListener(PopupManager.instance.OpenOptionPanel);
     }

@@ -16,12 +16,48 @@ MonoBehaviour:
   - id: 101
     name: Slash
     damage: 10
+    atkType: 0
+    statType: 0
+    effectType: 0
+    targetType: 3
+    posType: 0
   - id: 102
     name: Piercing Thrust
     damage: 8
+    atkType: 0
+    statType: 0
+    effectType: 0
+    targetType: 3
+    posType: 0
   - id: 103
     name: Crescent Slash
     damage: 20
+    atkType: 0
+    statType: 0
+    effectType: 0
+    targetType: 3
+    posType: 1
   - id: 104
     name: Tempest Strike
     damage: 999
+    atkType: 0
+    statType: 0
+    effectType: 0
+    targetType: 4
+    posType: 1
+  - id: 501
+    name: Melee Attack
+    damage: 10
+    atkType: 0
+    statType: 0
+    effectType: 0
+    targetType: 3
+    posType: 0
+  - id: 502
+    name: Poison Sprite
+    damage: 3
+    atkType: 0
+    statType: 1
+    effectType: 1
+    targetType: 3
+    posType: 1

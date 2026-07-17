@@ -14,8 +14,8 @@ public class Mercenary
     public int exp;
     public int statpoint;
 
-    public int hp;
-    public int maxHp;
+    public float hp;
+    public float maxHp;
 
     public int str;
     public int intel;

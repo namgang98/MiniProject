@@ -21,7 +21,7 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Main");
         SoundManager.instance.PlayBGM(BGMType.mainBGM);
     }
-    public void GameStart()
+    public void Town()
     {
         SceneManager.LoadScene("Town");
         SoundManager.instance.PlayBGM(BGMType.townBGM);

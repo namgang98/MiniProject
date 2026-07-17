@@ -12,14 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bee880d497fa3d4f84b4c3641a238f9, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: Assembly-CSharp::MonsterData
+  skillData: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
   monsterList:
   - id: 1001
     name: Slime
-    hp: 50
+    maxHp: 50
     gold: 100
+    str: 1
+    intel: 1
     dex: 3
+    skillID: f5010000f6010000
   - id: 1001
     name: KingSlime
-    hp: 100
+    maxHp: 100
     gold: 9999
+    str: 5
+    intel: 8
     dex: 5
+    skillID: f5010000f6010000
