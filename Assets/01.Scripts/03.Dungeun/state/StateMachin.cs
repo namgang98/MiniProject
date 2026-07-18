@@ -1,7 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 
-public interface Istate<T>
+public interface IState<T>
 {
     public void Enter(T obj);
     public void Exit(T obj);
@@ -10,21 +11,21 @@ public interface Istate<T>
 
 public class StateMachin<T>
 {
-    protected Istate<T> currentState;
+
+    protected IState<T> currentState;
 
     private T obj;
 
-    public void ChangeState(Istate<T> state)
+public void ChangeState(IState<T> state)
     {
         currentState.Exit(obj);
         currentState = state;
         currentState.Enter(obj);
     }
 
-    public void Update()
-    {
-        currentState.Update(obj);
-    }
+    public void Update() => currentState?.Update(obj);
+
 
 
 }
+

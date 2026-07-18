@@ -2,8 +2,7 @@ using UnityEngine;
 
 public abstract class BattleUnit : MonoBehaviour
 {
-    protected float hp;
-    protected HpBar hpBar;
+    public int Dex { get; protected set; }
 
     public virtual void TakeDamage(int dmg)
     {

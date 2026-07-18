@@ -5,10 +5,10 @@ using UnityEngine;
 public enum stageType
 {
     FirstFloor,
-    Floor2th,
-    Floor3th,
-    Floor4th,
-    Floor5th
+    Floor2,
+    Floor3,
+    Floor4,
+    Floor5
 
 }
 public class BattleManager : MonoBehaviour
@@ -37,6 +37,9 @@ public class BattleManager : MonoBehaviour
     private void Start()
     {
         SpawnParty();
+        SpawnMonster();
+
+        TurnManager.instance.SetTurn(GetBattleUnit());
     }
     #region 용병관련
     void SpawnParty()
@@ -62,7 +65,7 @@ public class BattleManager : MonoBehaviour
 
         MercenaryManager.instance.ReMoveMercenary(mer);
         MercenaryManager.instance.isReMoveParty(mer);
-
+        TurnManager.instance.RemoveUnit(battlemer);
         partys.Remove(battlemer);
         Destroy(battlemer.gameObject);
 
@@ -76,7 +79,7 @@ public class BattleManager : MonoBehaviour
     }
     #endregion
 
-    public void spawnMonster()
+    public void SpawnMonster()
     {
         for(int i = 0; i < monsPos.Length; i++)
         {
@@ -91,6 +94,7 @@ public class BattleManager : MonoBehaviour
     }
     public void DieMonster(BattleMonster mon)
     {
+        TurnManager.instance.RemoveUnit(mon);
         mons.Remove(mon);
         Destroy(mon.gameObject);
 
@@ -101,4 +105,15 @@ public class BattleManager : MonoBehaviour
     {
         //몬스터포스2에 드랍아이템 들어 있는 상자스폰  
     }
+
+    public List<BattleUnit> GetBattleUnit()
+    {
+        List<BattleUnit> units = new List<BattleUnit>();
+
+        units.AddRange(partys);
+        units.AddRange(mons);
+
+        return units;
+    }
+
 }

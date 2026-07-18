@@ -1,17 +1,19 @@
+using System;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
-public class BattleMercenary : MonoBehaviour
+public class BattleMercenary : BattleUnit
 {
-   
     public Mercenary data { get; private set; }
     [SerializeField] HpBar hpBar;
         
     public void SetData(Mercenary mer)
     {
         data = mer;
+        Dex = data.dex;
         hpBar.SetGauge(data.maxHp);
     }
-    public void TakeDamage(int dmg)
+    public override void TakeDamage(int dmg)
     {
         data.hp -= dmg;
 
