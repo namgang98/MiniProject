@@ -2,28 +2,24 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-public enum stageType
-{
-    FirstFloor,
-    Floor2,
-    Floor3,
-    Floor4,
-    Floor5
-
-}
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
 
+    public BattleStateMachin stateMachin;
+    public Skill currentSkill;
+    public BattleUnit currentTarget;
+    public List<BattleUnit> currentTargets;
+
     [SerializeField] BattleMercenary battleMerPrefab;
     [SerializeField] Transform[] partyPos;
-    List<BattleMercenary> partys = new List<BattleMercenary>();
+    List<BattleMercenary> partys = new();
 
     [SerializeField] MonsterData monsterData;
     [SerializeField] BattleMonster battleMonsterPrefab;
     [SerializeField] Transform[] monsPos;
     [SerializeField] List<int> spawnMonsterID; 
-    List<BattleMonster> mons = new List<BattleMonster>();
+    List<BattleMonster> mons = new();
 
     private void Awake()
     {
@@ -31,7 +27,7 @@ public class BattleManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
-
+        stateMachin = new BattleStateMachin(this);
     }
 
     private void Start()
@@ -40,6 +36,12 @@ public class BattleManager : MonoBehaviour
         SpawnMonster();
 
         TurnManager.instance.SetTurn(GetBattleUnit());
+
+        stateMachin.ChangeState(stateMachin.startState);
+    }
+    private void Update()
+    {
+        stateMachin?.Update();
     }
     #region 용병관련
     void SpawnParty()
@@ -61,7 +63,7 @@ public class BattleManager : MonoBehaviour
 
     public void DieMercenary(BattleMercenary battlemer)
     {
-        Mercenary mer = battlemer.data;
+        Mercenary mer = battlemer.Data;
 
         MercenaryManager.instance.ReMoveMercenary(mer);
         MercenaryManager.instance.isReMoveParty(mer);
@@ -108,12 +110,40 @@ public class BattleManager : MonoBehaviour
 
     public List<BattleUnit> GetBattleUnit()
     {
-        List<BattleUnit> units = new List<BattleUnit>();
+        List<BattleUnit> units = new();
 
         units.AddRange(partys);
         units.AddRange(mons);
 
         return units;
     }
+    public void ChangeState(IState state)
+    {
+        stateMachin.ChangeState(state);
+    }
+    public int GetUnitIndex(BattleUnit unit)
+    {
+        if(unit.UnitType == UnitType.Mercenary)
+        {
+            return partys.IndexOf((BattleMercenary)unit);
+        }
+        else
+            return mons.IndexOf((BattleMonster)unit);
+    }
+    public List<BattleUnit> GetUnitsByType(UnitType type)
+    {
+        List<BattleUnit> units = new();
 
+        if (type == UnitType.Mercenary)
+        { 
+            units.AddRange(partys);
+        }
+        else if (type == UnitType.Monster)
+        {
+
+            units.AddRange(mons);
+        }
+
+        return units;
+    }
 }

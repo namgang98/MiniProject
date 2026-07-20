@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum weapons
+public enum Weapons
 {
     sword,
     bow,
@@ -13,10 +13,12 @@ public enum weapons
 [Serializable]
 public class Weapon
 {
-    public weapons weapons;
+    public int id;
+    public string name;
+    public Weapons weapons;
     public GradeData grade;
-    public List<int> skillIID = new List<int>();
-    public Weapon(weapons weapons, SkillData skills, GradeData grade)
+    public List<int> skillID = new();
+    public Weapon(Weapons weapons,GradeData grade)
     {
         this.weapons = weapons;
         this.grade = grade;
@@ -26,5 +28,5 @@ public class Weapon
 public class WeaponData : ScriptableObject
 {
     public SkillData skillData;
-    public List<Weapon> weapons = new List<Weapon>();
+    public List<Weapon> weapons = new();
 }

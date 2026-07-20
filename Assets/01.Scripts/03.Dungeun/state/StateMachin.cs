@@ -2,28 +2,26 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public interface IState<T>
+public interface IState
 {
-    public void Enter(T obj);
-    public void Exit(T obj);
-    public void Update(T obj);
+    public void Enter();
+    public void Exit();
+    public void Update();
 }
 
-public class StateMachin<T>
+public class StateMachin
 {
 
-    protected IState<T> currentState;
+    public IState currentState;
 
-    private T obj;
-
-public void ChangeState(IState<T> state)
+    public void ChangeState(IState state)
     {
-        currentState.Exit(obj);
+        currentState?.Exit();
         currentState = state;
-        currentState.Enter(obj);
+        currentState?.Enter();
     }
 
-    public void Update() => currentState?.Update(obj);
+    public void Update() => currentState?.Update();
 
 
 

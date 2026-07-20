@@ -7,6 +7,8 @@ public class InnManager : MonoBehaviour
     [SerializeField] GameObject mercenaryPrefab;
     [SerializeField] MercenaryRandomTable randomTable;
 
+    [SerializeField] WeaponRandomTable weaponRandomTable;
+
     bool isSpawn = false;
 
     private void OnEnable()
@@ -23,7 +25,9 @@ public class InnManager : MonoBehaviour
         for (int i = 0; i < spawnPos.Length; i++)
         {
             Mercenary data = randomTable.Spawning();
+            data.weapon = weaponRandomTable.CreateWeapon();
             GameObject obj = Instantiate(mercenaryPrefab, spawnPos[i], false);
+
             
             obj.GetComponent<merDatamanger>().SetData(data);
             obj.GetComponent<MercenaryCustomizing>().SetMercenary(data);

@@ -32,5 +32,5 @@ public class Monster
 public class MonsterData : ScriptableObject
 {
     public SkillData skillData;
-    public List<Monster> monsterList = new List<Monster>();
+    public List<Monster> monsterList = new();
 }

@@ -1,16 +1,22 @@
 using UnityEngine;
 
-public class EndState : MonoBehaviour
+public class EndState : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public EndState(BattleStateMachin machine, BattleManager manager) : base(machine, manager)
+    {
+    }
+    public override void Enter()
+    {
+        Debug.Log("endTurn");
+        TurnManager.instance.NextTurn();
+        machin.ChangeState(machin.startState);
+    }
+    public override void Exit()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-        
+
     }
 }

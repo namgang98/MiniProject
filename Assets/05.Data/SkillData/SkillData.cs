@@ -46,5 +46,5 @@ public class Skill
 [CreateAssetMenu(fileName = "Skill", menuName = "Data/Skill")]
 public class SkillData : ScriptableObject
 {
-    public List<Skill> skills = new List<Skill>();
+    public List<Skill> skills = new();
 }

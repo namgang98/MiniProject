@@ -7,7 +7,7 @@ public class TurnManager : MonoBehaviour
 {
     public static TurnManager instance;
 
-    public List<BattleUnit> turnList = new List<BattleUnit>();
+    public List<BattleUnit> turnList = new();
 
     int turnCount;
 
@@ -18,19 +18,6 @@ public class TurnManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetTurn(List<BattleUnit> units)
     {
         turnList.Clear();

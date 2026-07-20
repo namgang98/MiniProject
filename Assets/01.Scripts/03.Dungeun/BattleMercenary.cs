@@ -1,28 +1,44 @@
 using System;
 using Unity.Android.Gradle.Manifest;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleMercenary : BattleUnit
 {
-    public Mercenary data { get; private set; }
+    public Mercenary Data { get; private set; }
     [SerializeField] HpBar hpBar;
-        
+    [SerializeField] MercenaryCustomizing custom;
+    [SerializeField] Button btn;
+   
+    private void Start()
+    {
+        btn.onClick.AddListener(OnClick);
+    }
     public void SetData(Mercenary mer)
     {
-        data = mer;
-        Dex = data.dex;
-        hpBar.SetGauge(data.maxHp);
+        Data = mer;
+
+        STR = Data.totalStr;
+        INT = Data.totalInt;
+        Dex = Data.totalDex;
+
+        UnitType = UnitType.Mercenary;
+        custom = GetComponent<MercenaryCustomizing>();
+        if(custom != null)
+        custom.SetMercenary(Data);
+
+        hpBar.SetGauge(Data.hp/Data.maxHp);
     }
     public override void TakeDamage(int dmg)
     {
-        data.hp -= dmg;
+        Data.hp -= dmg;
 
-        if(data.hp < 0)
-            data.hp = 0;
+        if(Data.hp < 0)
+            Data.hp = 0;
 
-        hpBar.SetGauge(data.hp/data.maxHp);
+        hpBar.SetGauge(Data.hp/Data.maxHp);
 
-        if(data.hp <= 0)
+        if(Data.hp <= 0)
         {
             BattleManager.instance.DieMercenary(this);
         }
@@ -30,11 +46,28 @@ public class BattleMercenary : BattleUnit
 
     public void Heal(int heal)
     {
-        data.hp += heal;
+        Data.hp += heal;
 
-        if(data.hp > data.maxHp)
-            data.hp = data.maxHp;
+        if(Data.hp > Data.maxHp)
+            Data.hp = Data.maxHp;
 
-        hpBar.SetGauge(data.hp / data.maxHp);
+        hpBar.SetGauge(Data.hp / Data.maxHp);
+    }
+
+    public void OnClick()
+    {
+        BattleUnit unit = TurnManager.instance.Getcurrentunits();
+
+        if (unit == this)
+        {
+            DungeunUIManager.Instance.OpenStatPop(this);
+            DungeunUIManager.Instance.OpenSkillPop(this);
+        }
+        else
+        {
+            DungeunUIManager.Instance.CloseStatPop();
+            DungeunUIManager.Instance.OpenStatPop(this);
+            DungeunUIManager.Instance.CloseSkillPop();
+        }
     }
 }

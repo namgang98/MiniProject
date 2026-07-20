@@ -8,7 +8,17 @@ public class MenuPanel : MonoBehaviour
     [SerializeField] Button merBtn;
     [SerializeField] Button chestBtn;
 
-    public void opoption()
+    private void Awake()
+    {
+        if (merBtn != null)
+            merBtn.onClick.AddListener(OpenMerList);
+        if (optionBtn != null)
+            optionBtn.onClick.AddListener(OpenOption);
+        if (closeBtn != null)
+            closeBtn.onClick.AddListener(CloseBtn);
+    }
+
+    public void OpenOption()
     {
         PopupManager.instance.OpenOptionPanel();
     }
@@ -16,8 +26,13 @@ public class MenuPanel : MonoBehaviour
     {
         PopupManager.instance.CloseMenuBtn();
     }
-    public void openmerlist()
+    public void OpenMerList()
     {
         PopupManager.instance.OpenMerListPopup();
+    }
+    public void SaveGoMain()
+    {
+        //세이브코드
+        SceneChanger.Instance.Main();
     }
 }

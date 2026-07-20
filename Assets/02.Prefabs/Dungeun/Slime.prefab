@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5352246337083927600}
   - component: {fileID: 8228699193298761670}
-  - component: {fileID: 7051397237216693258}
+  - component: {fileID: 1803068914427494344}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -159,13 +159,13 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7051397237216693258
+--- !u!114 &1803068914427494344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c997dbf2192636e4dac9916d7a48c369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HpBar
+  img: {fileID: 279558001405231433}
 --- !u!1 &4876144520632296511
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,10 +244,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -6471439713477102818, guid: e3591eae72288524091178cce5eac7ff, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -371,7 +372,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9122600925115497097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9025884194212816838
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +493,7 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -498,4 +511,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178014c732118ca48aad1204743647d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleMonster
-  hpbar: {fileID: 7051397237216693258}
+  btn: {fileID: 1875312829519141676}
+  hpbar: {fileID: 1803068914427494344}

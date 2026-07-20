@@ -122,9 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7952998593903947551}
   - component: {fileID: 159195835291623592}
+  - component: {fileID: 4135306621722785960}
   - component: {fileID: 2037808407682977}
   - component: {fileID: 2726652970534911068}
-  - component: {fileID: 4135306621722785960}
   m_Layer: 5
   m_Name: BattleMer
   m_TagString: Untagged
@@ -168,6 +168,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MercenaryCustomizing
   customData: {fileID: 11400000, guid: 1ec998e97e057cd43b1f60869dc68c55, type: 2}
   hairpos: {fileID: 7942721457220822261}
+--- !u!114 &4135306621722785960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461020833249958168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df32f74cacd50ef4da380833b049c8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleMercenary
+  hpBar: {fileID: 8042085054012743494}
+  custom: {fileID: 159195835291623592}
+  btn: {fileID: 8538417294999563033}
 --- !u!222 &2037808407682977
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -206,19 +221,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4135306621722785960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461020833249958168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df32f74cacd50ef4da380833b049c8f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BattleMercenary
-  hpBar: {fileID: 8042085054012743494}
 --- !u!1 &3168889869743935221
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,9 +588,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -604,6 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c997dbf2192636e4dac9916d7a48c369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HpBar
+  img: {fileID: 2736017592433100293}
 --- !u!1 &8296939906057304331
 GameObject:
   m_ObjectHideFlags: 0

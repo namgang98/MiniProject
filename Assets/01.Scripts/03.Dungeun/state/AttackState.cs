@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class AttackState : MonoBehaviour
+public class AttackState : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public AttackState(BattleStateMachin machine, BattleManager manager) : base(machine, manager) { }
+    public override void Enter()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    }
+    public override void Exit()
     {
-        
+
+    }
+    public override void Update()
+    {
+
     }
 }

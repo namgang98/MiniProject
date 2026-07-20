@@ -24,6 +24,8 @@ public class Mercenary
     public int hairNum;
     public int hairColorNum;
 
+    public HaveWeapon weapon;
+
     public Mercenary(int uniqueID, string name, int str, int intel, int dex, int hairNum, int hairColorNum)
     {
         this.uniqueID = uniqueID;

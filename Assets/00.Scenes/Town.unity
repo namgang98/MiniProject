@@ -1737,6 +1737,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &803516074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803516076}
+  - component: {fileID: 803516075}
+  m_Layer: 0
+  m_Name: Weaponrandomtable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &803516075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803516074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1ebcd6bf4ae9d459de89da78b92aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponRandomTable
+  weaponData: {fileID: 11400000, guid: d824881c259b2d743809b5acb928f503, type: 2}
+  gradeData: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}
+--- !u!4 &803516076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803516074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 553.628, y: 282.83936, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &817139277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,6 +3195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownBTNAdder
   menuBtn: {fileID: 1511993964}
+  uicavas: {fileID: 775158784}
+  encanvas: {fileID: 754916455}
+  dim: {fileID: 60857858}
 --- !u!4 &1411174060
 Transform:
   m_ObjectHideFlags: 0
@@ -3936,6 +3985,7 @@ MonoBehaviour:
   - {fileID: 1238518687}
   mercenaryPrefab: {fileID: 2461020833249958168, guid: c47cad8c565baa74da50e27c8c92c88b, type: 3}
   randomTable: {fileID: 73727221}
+  weaponRandomTable: {fileID: 803516075}
 --- !u!1 &1929934934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,4 +4194,5 @@ SceneRoots:
   - {fileID: 164642407}
   - {fileID: 1411174060}
   - {fileID: 170806418}
+  - {fileID: 803516076}
   - {fileID: 754916456}

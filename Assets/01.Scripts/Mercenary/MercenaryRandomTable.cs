@@ -56,6 +56,9 @@ public class MercenaryRandomTable : MonoBehaviour
             hairColorNum = Random.Range(0, customData.hairColors.Length);
         }
 
+        //임시 용병무기생성
+
+
         // 윗 값 용병생성
         return new Mercenary(uniqueID, changeName, str, intel, dex, hairNum, hairColorNum);
     }
