@@ -29,8 +29,9 @@ public class TurnManager : MonoBehaviour
         turnCount = 0;
     }
 
-    public BattleUnit Getcurrentunits()
+    public BattleUnit GetCurrentUnits()
     {
+        StageManager.instance.LoadStage();
         return turnList[turnCount];
     }
     public void NextTurn()
@@ -54,6 +55,6 @@ public class TurnManager : MonoBehaviour
 
         if(turnCount >= turnList.Count)
             turnCount = 0;
-    }    
+    }  
 
 }

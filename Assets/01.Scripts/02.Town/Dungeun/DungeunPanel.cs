@@ -11,7 +11,7 @@ public class DungeunPanel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnEnable()
     {
-        MercenaryManager.instance.clearParty();
+        MercenaryManager.instance.ClearParty();
 
         Refresh();
     }
@@ -53,7 +53,7 @@ public class DungeunPanel : MonoBehaviour
 
     public void AddParty(Mercenary mer)
     {
-        if (MercenaryManager.instance.isAddParty(mer))
+        if (MercenaryManager.instance.IsAddParty(mer))
         {
             Refresh();
         }
@@ -61,7 +61,7 @@ public class DungeunPanel : MonoBehaviour
     }
     public void RemoveParty(Mercenary mer)
     {
-        if(MercenaryManager.instance.isReMoveParty(mer))
+        if(MercenaryManager.instance.IsReMoveParty(mer))
         Refresh();
     }
 }

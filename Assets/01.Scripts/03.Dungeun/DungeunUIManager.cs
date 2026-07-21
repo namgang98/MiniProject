@@ -4,22 +4,30 @@ using UnityEngine.UI;
 
 public class DungeunUIManager : MonoBehaviour
 {
-    public static DungeunUIManager Instance;
+    public static DungeunUIManager instance;
 
     [SerializeField] Canvas uiCanvas;
     [SerializeField] Canvas battleCanvas;
 
     [SerializeField] StatPanel statPanel;
 
+    [SerializeField] GameObject chestpop;
+    ChestB chest;
+
+    [SerializeField] GameObject exitNextBTNPanel;
+
+
     [SerializeField] WeaponData weaponData;
     [SerializeField] SkillData skillData;
     [SerializeField] GameObject skillpop;
     [SerializeField] Button[] skillBottons;
 
+
+
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        if (instance == null)
+            instance = this;
         else
             Destroy(gameObject);
     }
@@ -38,7 +46,7 @@ public class DungeunUIManager : MonoBehaviour
                 skillBottons[i].gameObject.SetActive(true);
                    
                 int skillsID = haveweapon.skillID[i];
-                Skill skill = skillData.skills.Find(x => x.id == skillsID);
+                Skill skill = SkillManager.instance.GetSkill(skillsID);
                 skillBottons[i].GetComponentInChildren<TMP_Text>().text = skill.name;
 
                 skillBottons[i].onClick.RemoveAllListeners();
@@ -67,4 +75,25 @@ public class DungeunUIManager : MonoBehaviour
     {
         statPanel.gameObject.SetActive(false);
     }
+
+
+    public void OpenChestPop(ChestB chest)
+    {
+        chestpop.SetActive(true);
+        this.chest = chest;
+    }
+    public void CloseChestPop()
+    {
+        chestpop.SetActive(false);
+    }
+
+    public void OpenChoisPanel()
+    {
+        exitNextBTNPanel.SetActive(true);
+    }
+    public void CloseChoisPanel()
+    {
+        exitNextBTNPanel.SetActive(false);
+    }
+
 }

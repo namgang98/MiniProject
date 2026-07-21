@@ -21,12 +21,16 @@ MonoBehaviour:
     str: 1
     intel: 1
     dex: 3
+    exp: 5
+    prefab: {fileID: 7986805987928722840, guid: c13b65840704770408dc3c847060d8b8, type: 3}
     skillID: f5010000f6010000
-  - id: 1001
+  - id: 1002
     name: KingSlime
     maxHp: 100
     gold: 9999
     str: 5
     intel: 8
     dex: 5
+    exp: 0
+    prefab: {fileID: 0}
     skillID: f5010000f6010000

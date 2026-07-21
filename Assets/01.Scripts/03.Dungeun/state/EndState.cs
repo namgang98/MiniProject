@@ -7,7 +7,6 @@ public class EndState : BaseState
     }
     public override void Enter()
     {
-        Debug.Log("endTurn");
         TurnManager.instance.NextTurn();
         machin.ChangeState(machin.startState);
     }

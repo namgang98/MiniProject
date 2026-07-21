@@ -11,7 +11,7 @@ public class SelectTargetState : BaseState
     
     public override void Enter()
     {
-        caster = TurnManager.instance.Getcurrentunits();
+        caster = TurnManager.instance.GetCurrentUnits();
         selectSkill = BattleManager.instance.currentSkill;
     }
     public override void Exit()
@@ -24,8 +24,8 @@ public class SelectTargetState : BaseState
         {
             if (caster is BattleMercenary mer)
             {
-                DungeunUIManager.Instance.OpenSkillPop(mer);
-
+                DungeunUIManager.instance.CloseSkillPop();
+                machin.ChangeState(machin.startState);
             }
         }
     }
@@ -37,8 +37,8 @@ public class SelectTargetState : BaseState
 
             BattleManager.instance.currentTarget = target;
             BattleManager.instance.currentTargets = lastTarget;
-            DungeunUIManager.Instance.CloseSkillPop();
-            DungeunUIManager.Instance.CloseStatPop();
+            DungeunUIManager.instance.CloseSkillPop();
+            DungeunUIManager.instance.CloseStatPop();
             machin.ChangeState(machin.mercenaryAttackState);
         }
     }
@@ -71,7 +71,7 @@ public class SelectTargetState : BaseState
     
         if(selectSkill.posType == TargetPosType.Front)
         {
-            int targetIndex = BattleManager.instance.GetUnitIndex(target);
+            int targetIndex = BattleUnitManager.instance.GetUnitIndex(target);
             if(targetIndex == 0 || targetIndex == 1)
                 return true;
 
@@ -94,7 +94,7 @@ public class SelectTargetState : BaseState
 
             case TargetType.Teamall:
             case TargetType.Enemyall:
-                targets.AddRange(BattleManager.instance.GetUnitsByType(unit.UnitType));
+                targets.AddRange(BattleUnitManager.instance.GetUnitsByType(unit.UnitType));
                 break;
         
         }

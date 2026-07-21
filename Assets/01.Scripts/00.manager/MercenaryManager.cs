@@ -7,7 +7,7 @@ public class MercenaryManager : MonoBehaviour
 {
     public static MercenaryManager instance;
 
-    public List<Mercenary> haveMerList = new List<Mercenary>();
+    public List<Mercenary> haveMerList = new();
     public Mercenary[] party = new Mercenary[4];
 
 
@@ -39,7 +39,7 @@ public class MercenaryManager : MonoBehaviour
     #endregion
 
     #region 파티관리
-    public bool isAddParty(Mercenary mer)
+    public bool IsAddParty(Mercenary mer)
     {
         if(IsInParty(mer))
             return false;
@@ -54,7 +54,7 @@ public class MercenaryManager : MonoBehaviour
         }
         return false;
     }
-    public bool isReMoveParty(Mercenary mer)
+    public bool IsReMoveParty(Mercenary mer)
     {
         for(int i = 0; i < party.Length; i++)
         {
@@ -75,7 +75,7 @@ public class MercenaryManager : MonoBehaviour
         }
         return false;
     }
-    public void clearParty()
+    public void ClearParty()
     {
         for (int i = 0; i < party.Length; i++)
         {

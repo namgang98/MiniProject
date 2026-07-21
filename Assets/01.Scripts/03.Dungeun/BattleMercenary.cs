@@ -53,21 +53,26 @@ public class BattleMercenary : BattleUnit
 
         hpBar.SetGauge(Data.hp / Data.maxHp);
     }
+    public void FullHeal()
+    {
+        Data.hp = Data.maxHp;
+        hpBar.SetGauge(Data.hp / Data.maxHp);
+    }
 
     public void OnClick()
     {
-        BattleUnit unit = TurnManager.instance.Getcurrentunits();
+        BattleUnit unit = TurnManager.instance.GetCurrentUnits();
 
         if (unit == this)
         {
-            DungeunUIManager.Instance.OpenStatPop(this);
-            DungeunUIManager.Instance.OpenSkillPop(this);
+            DungeunUIManager.instance.OpenStatPop(this);
+            DungeunUIManager.instance.OpenSkillPop(this);
         }
         else
         {
-            DungeunUIManager.Instance.CloseStatPop();
-            DungeunUIManager.Instance.OpenStatPop(this);
-            DungeunUIManager.Instance.CloseSkillPop();
+            DungeunUIManager.instance.CloseStatPop();
+            DungeunUIManager.instance.OpenStatPop(this);
+            DungeunUIManager.instance.CloseSkillPop();
         }
     }
 }

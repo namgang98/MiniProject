@@ -5,7 +5,7 @@ public class MercenaryAttackState : BaseState
     public MercenaryAttackState(BattleStateMachin machine, BattleManager manager) : base(machine, manager) { }
     public override void Enter()
     {
-        BattleUnit caster = TurnManager.instance.Getcurrentunits();
+        BattleUnit caster = TurnManager.instance.GetCurrentUnits();
         Skill skill = manager.currentSkill;
         BattleUnit target = manager.currentTarget;
         
