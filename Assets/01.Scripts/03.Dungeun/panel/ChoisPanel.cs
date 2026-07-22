@@ -20,6 +20,7 @@ public class ChoisPanel : MonoBehaviour
     }
     public void ClickNext()
     {
+        BattleUnitManager.instance.OffTurnMask();
         DungeunUIManager.instance.CloseChoisPanel();
         Destroy(SpawnManager.instance.chest.gameObject);
         BattleManager.instance.Next();

@@ -6,6 +6,7 @@ public class Stage
 {
     public int stageID;
     public List<int> monsterIDs = new();
+    public List<int> spawnIndex = new();
     public int chestid;
 
 

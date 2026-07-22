@@ -17,7 +17,6 @@ MonoBehaviour:
   - id: 1001
     name: Slime
     maxHp: 50
-    gold: 100
     str: 1
     intel: 1
     dex: 3
@@ -27,10 +26,9 @@ MonoBehaviour:
   - id: 1002
     name: KingSlime
     maxHp: 100
-    gold: 9999
     str: 5
     intel: 8
     dex: 5
-    exp: 0
-    prefab: {fileID: 0}
+    exp: 10
+    prefab: {fileID: 7859974051254058499, guid: 3d5c206122d741842ae3f178a14886d1, type: 3}
     skillID: f5010000f6010000

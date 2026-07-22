@@ -99,4 +99,18 @@ public class BattleUnitManager : MonoBehaviour
             mer.FullHeal();
         }
     }
+
+    public void OffTurnMask()
+    {
+
+        foreach (BattleMercenary mer in partys)
+        {
+            Debug.Log(mer.name);
+            mer.SetTurnMark(false);
+        }
+        foreach(BattleMonster mon in monsters)
+        {
+            mon.SetTurnMark(false);
+        }
+    }
 }

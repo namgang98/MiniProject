@@ -564,7 +564,7 @@ MonoBehaviour:
   innOUTBtn: {fileID: 1341687507}
   ShopOUTBtn: {fileID: 0}
   DungeunOUTBtn: {fileID: 770352205}
-  menuBtn: {fileID: 990415968}
+  UIs: {fileID: 418407945}
   townPanel: {fileID: 676866284}
   innPanel: {fileID: 1916009872}
   shopPanel: {fileID: 0}

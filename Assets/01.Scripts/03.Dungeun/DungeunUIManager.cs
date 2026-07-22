@@ -14,7 +14,8 @@ public class DungeunUIManager : MonoBehaviour
     [SerializeField] GameObject chestpop;
     ChestB chest;
 
-    [SerializeField] GameObject exitNextBTNPanel;
+    [SerializeField] GameObject choisPanel;
+    [SerializeField] GameObject nextBTN;
 
     [SerializeField] SkillPanel skillPanel;
 
@@ -26,6 +27,7 @@ public class DungeunUIManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    #region ½ºÅ³ÆÇ³Ú
     public void OpenSkillPanel(BattleMercenary mer)
     {
         skillPanel.gameObject.SetActive(true);
@@ -35,6 +37,9 @@ public class DungeunUIManager : MonoBehaviour
     {
         skillPanel.gameObject.SetActive(false);
     }
+    #endregion
+
+    #region ½ºÅÝÆÇ³Ú
     public void OpenStatPop(BattleMercenary mer)
     {
         statPanel.gameObject.SetActive(true);
@@ -44,6 +49,9 @@ public class DungeunUIManager : MonoBehaviour
     {
         statPanel.gameObject.SetActive(false);
     }
+    #endregion
+
+    #region »óÀÚÆÇ³Ú
     public void OpenChestPop(ChestB chest)
     {
         chestpop.SetActive(true);
@@ -53,14 +61,22 @@ public class DungeunUIManager : MonoBehaviour
     {
         chestpop.SetActive(false);
     }
+    #endregion
 
+    #region ÃÊÀÌ½ºÆÇ³Ú
     public void OpenChoisPanel()
     {
-        exitNextBTNPanel.SetActive(true);
+        choisPanel.SetActive(true);
     }
     public void CloseChoisPanel()
     {
-        exitNextBTNPanel.SetActive(false);
+        choisPanel.SetActive(false);
+        nextBTN.SetActive(true);
     }
-
+    public void OpenClearPanel()
+    {
+        choisPanel.SetActive(true);
+        nextBTN.SetActive(false);
+    }
+    #endregion
 }

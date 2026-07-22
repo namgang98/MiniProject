@@ -6,7 +6,10 @@ public class StartState : BaseState
     public StartState(BattleStateMachin machine, BattleManager manager ) : base(machine, manager) {}
     public override void Enter()
     {
+        Debug.Log("StartState");
         BattleUnit unit = TurnManager.instance.GetCurrentUnits();
+        unit.SetTurnMark(true);
+
         if (unit is BattleMonster)
         {
             machin.ChangeState(machin.monsterAttackState);

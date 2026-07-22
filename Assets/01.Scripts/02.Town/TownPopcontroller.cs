@@ -10,7 +10,7 @@ public class TownPopcontroller : MonoBehaviour
     [SerializeField] Button ShopOUTBtn;
     [SerializeField] Button DungeunOUTBtn;
 
-    [SerializeField] GameObject menuBtn;
+    [SerializeField] GameObject UIs;
     [SerializeField] GameObject townPanel;
     [SerializeField] GameObject innPanel;
     [SerializeField] GameObject shopPanel;
@@ -52,7 +52,7 @@ public class TownPopcontroller : MonoBehaviour
         falsepanel.transform.SetParent(encanvas.transform, false);
         truepanel.transform.SetParent (uicanvas.transform, false);
         truepanel.SetActive(true);
-        menuBtn.transform.SetAsLastSibling();
+        UIs.transform.SetAsLastSibling();
     }
 
 

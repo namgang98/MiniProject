@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] BattleMercenary battleMercenary;
     [SerializeField] MonsterData monsterData;
     [SerializeField] ChestData chestData;
+
     public ChestB chest;
     private void Awake()
     {

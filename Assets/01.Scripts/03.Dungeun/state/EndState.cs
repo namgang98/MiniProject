@@ -7,6 +7,8 @@ public class EndState : BaseState
     }
     public override void Enter()
     {
+        BattleUnit unit = TurnManager.instance.GetCurrentUnits();
+        unit.SetTurnMark(false);
         TurnManager.instance.NextTurn();
         machin.ChangeState(machin.startState);
     }

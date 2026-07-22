@@ -11,9 +11,14 @@ public class ChestPanel : MonoBehaviour
     }
     public void CloseChest()
     {
-        //체스트인벤 닫기
         DungeunUIManager.instance.CloseChestPop();
-        //확인후 복귀/다음층 이동시 안에 아이템이스트 초기화 > 다음 버튼기능들로 이동
-        DungeunUIManager.instance.OpenChoisPanel();
+        if (StageManager.instance.isLastStage())
+        {
+            DungeunUIManager.instance.OpenClearPanel();
+        }
+        else
+        {
+            DungeunUIManager.instance.OpenChoisPanel();
+        }
     }
 }

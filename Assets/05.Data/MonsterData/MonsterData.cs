@@ -8,7 +8,6 @@ public class Monster
     public int id;
     public string name;
     public float maxHp;
-    public int gold;
     public int str;
     public int intel;
     public int dex;

@@ -29,4 +29,9 @@ public class StageManager : MonoBehaviour
         currentStageID++;
         LoadStage();
     }
+    public bool isLastStage()
+    {
+        return currentStageID == stageData.stages.Count;
+    }
+
 }

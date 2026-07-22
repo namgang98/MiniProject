@@ -71,7 +71,7 @@ public class BattleManager : MonoBehaviour
         Stage stage = StageManager.instance.Stage;
         for (int i = 0; i < stage.monsterIDs.Count; i++)
         {
-            BattleMonster mon = SpawnManager.instance.SpawnMonster(monsPos[i], stage.monsterIDs[i]);
+            BattleMonster mon = SpawnManager.instance.SpawnMonster(monsPos[stage.spawnIndex[i]], stage.monsterIDs[i]);
             BattleUnitManager.instance.AddMon(mon);
         }
     }

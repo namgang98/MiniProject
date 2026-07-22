@@ -15,16 +15,21 @@ MonoBehaviour:
   stages:
   - stageID: 1
     monsterIDs: e9030000
+    spawnIndex: 01000000
     chestid: 6
   - stageID: 2
     monsterIDs: e9030000e9030000
+    spawnIndex: 0000000002000000
     chestid: 6
   - stageID: 3
     monsterIDs: e9030000e9030000
+    spawnIndex: 0000000002000000
     chestid: 6
   - stageID: 4
     monsterIDs: e9030000e9030000
+    spawnIndex: 0000000002000000
     chestid: 6
   - stageID: 5
-    monsterIDs: 
+    monsterIDs: ea030000
+    spawnIndex: 01000000
     chestid: 6
