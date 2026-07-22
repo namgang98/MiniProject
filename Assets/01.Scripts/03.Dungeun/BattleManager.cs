@@ -126,8 +126,4 @@ public class BattleManager : MonoBehaviour
         SpawnManager.instance.SpawnChest(monsPos[1],stage.chestid);
 
     }
-
-
-
-
 }

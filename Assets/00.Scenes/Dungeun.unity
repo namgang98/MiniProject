@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 207013268}
   - component: {fileID: 207013267}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Skill2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,6 +607,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654d008712b5a27408143c536ab399ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillPanel
+  weaponData: {fileID: 11400000, guid: d824881c259b2d743809b5acb928f503, type: 2}
+  skillData: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
+  skillBottons:
+  - {fileID: 2092038326}
+  - {fileID: 207013267}
+  - {fileID: 926965861}
+  - {fileID: 1422063693}
 --- !u!1 &491170086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1693,7 @@ GameObject:
   - component: {fileID: 926965862}
   - component: {fileID: 926965861}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Skill3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3006,7 +3013,7 @@ GameObject:
   - component: {fileID: 1422063694}
   - component: {fileID: 1422063693}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Skill4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3280,14 +3287,7 @@ MonoBehaviour:
   statPanel: {fileID: 251277782}
   chestpop: {fileID: 880716028}
   exitNextBTNPanel: {fileID: 317191803}
-  weaponData: {fileID: 11400000, guid: d824881c259b2d743809b5acb928f503, type: 2}
-  skillData: {fileID: 11400000, guid: 426c4317090feb14c81737b83383b2e4, type: 2}
-  skillpop: {fileID: 405027350}
-  skillBottons:
-  - {fileID: 2092038326}
-  - {fileID: 207013267}
-  - {fileID: 926965861}
-  - {fileID: 1422063693}
+  skillPanel: {fileID: 405027354}
 --- !u!4 &1559134303
 Transform:
   m_ObjectHideFlags: 0

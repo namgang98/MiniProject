@@ -24,7 +24,7 @@ public class SelectTargetState : BaseState
         {
             if (caster is BattleMercenary mer)
             {
-                DungeunUIManager.instance.CloseSkillPop();
+                DungeunUIManager.instance.CloseSkillPanel();
                 machin.ChangeState(machin.startState);
             }
         }
@@ -37,7 +37,7 @@ public class SelectTargetState : BaseState
 
             BattleManager.instance.currentTarget = target;
             BattleManager.instance.currentTargets = lastTarget;
-            DungeunUIManager.instance.CloseSkillPop();
+            DungeunUIManager.instance.CloseSkillPanel();
             DungeunUIManager.instance.CloseStatPop();
             machin.ChangeState(machin.mercenaryAttackState);
         }

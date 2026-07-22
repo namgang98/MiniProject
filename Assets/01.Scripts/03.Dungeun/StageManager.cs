@@ -26,7 +26,6 @@ public class StageManager : MonoBehaviour
 
     public void NextStage()
     {
-        Debug.Log("NextStage »£√‚");
         currentStageID++;
         LoadStage();
     }

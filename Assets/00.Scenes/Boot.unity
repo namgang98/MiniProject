@@ -627,6 +627,18 @@ MonoBehaviour:
     dex: 0
     hairNum: 0
     hairColorNum: 0
+    weapon:
+      uniqueID: 0
+      weaponID: 0
+      grade:
+        grades: 0
+        str: 0
+        intel: 0
+        dex: 0
+        skillcount: 0
+      str: 0
+      intel: 0
+      dex: 0
   - uniqueID: 0
     name: 
     totalStr: 0
@@ -642,6 +654,18 @@ MonoBehaviour:
     dex: 0
     hairNum: 0
     hairColorNum: 0
+    weapon:
+      uniqueID: 0
+      weaponID: 0
+      grade:
+        grades: 0
+        str: 0
+        intel: 0
+        dex: 0
+        skillcount: 0
+      str: 0
+      intel: 0
+      dex: 0
   - uniqueID: 0
     name: 
     totalStr: 0
@@ -657,6 +681,18 @@ MonoBehaviour:
     dex: 0
     hairNum: 0
     hairColorNum: 0
+    weapon:
+      uniqueID: 0
+      weaponID: 0
+      grade:
+        grades: 0
+        str: 0
+        intel: 0
+        dex: 0
+        skillcount: 0
+      str: 0
+      intel: 0
+      dex: 0
   - uniqueID: 0
     name: 
     totalStr: 0
@@ -672,6 +708,18 @@ MonoBehaviour:
     dex: 0
     hairNum: 0
     hairColorNum: 0
+    weapon:
+      uniqueID: 0
+      weaponID: 0
+      grade:
+        grades: 0
+        str: 0
+        intel: 0
+        dex: 0
+        skillcount: 0
+      str: 0
+      intel: 0
+      dex: 0
 --- !u!4 &529413680
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,6 +1072,7 @@ MonoBehaviour:
   merStatPop: {fileID: 3398925057570865091, guid: 3a29208c354a9c742a58c1d7907e2ba2, type: 3}
   PartysZeroPop: {fileID: 4877760007188503951, guid: c0987f784a081ad4993caa7b14c9589a, type: 3}
   NotFourPop: {fileID: 1160497547797720820, guid: 430f18dadeb13a545954f6fe161c5123, type: 3}
+  falsegold: {fileID: 5551530626685130283, guid: c1393ef8403badd4db06ccc2b89dd74c, type: 3}
 --- !u!4 &1836918194
 Transform:
   m_ObjectHideFlags: 0
@@ -1034,6 +1083,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.61181, y: 771.9213, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1918288832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918288834}
+  - component: {fileID: 1918288833}
+  m_Layer: 0
+  m_Name: GoldManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918288833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918288832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3045405f98bb1c643b06b35a2aee266c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoldManager
+--- !u!4 &1918288834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918288832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 680.2945, y: 419.84106, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1150,6 +1243,7 @@ SceneRoots:
   - {fileID: 8885131}
   - {fileID: 1836918194}
   - {fileID: 1530784002}
+  - {fileID: 1918288834}
   - {fileID: 1127748359}
   - {fileID: 529413680}
   - {fileID: 1931297893}

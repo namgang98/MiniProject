@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BattleMercenary : BattleUnit
 {
+    [SerializeField] SkillPanel skillPanel;
     public Mercenary Data { get; private set; }
     [SerializeField] HpBar hpBar;
     [SerializeField] MercenaryCustomizing custom;
@@ -66,13 +67,13 @@ public class BattleMercenary : BattleUnit
         if (unit == this)
         {
             DungeunUIManager.instance.OpenStatPop(this);
-            DungeunUIManager.instance.OpenSkillPop(this);
+            DungeunUIManager.instance.OpenSkillPanel(this);
+
         }
         else
         {
-            DungeunUIManager.instance.CloseStatPop();
             DungeunUIManager.instance.OpenStatPop(this);
-            DungeunUIManager.instance.CloseSkillPop();
+            DungeunUIManager.instance.CloseSkillPanel();
         }
     }
 }

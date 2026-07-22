@@ -53,7 +53,7 @@ public class MerInfoPanel : MonoBehaviour
     IEnumerator EmployfalsePopup()
     {
         PopupManager.instance.OpenfalsePop();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         PopupManager.instance.CloseFalsePop();
     }
     

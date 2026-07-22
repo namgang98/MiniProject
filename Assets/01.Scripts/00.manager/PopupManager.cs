@@ -5,6 +5,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class PopupManager : MonoBehaviour
 {
     public static PopupManager instance;
+
     #region ¸É¹ö
     Canvas uiCanvas;
     Canvas enCanvas;
@@ -33,7 +34,12 @@ public class PopupManager : MonoBehaviour
 
     [SerializeField] GameObject NotFourPop;
     GameObject NotFourPanel;
+
+    [SerializeField] GameObject falsegold;
+    GameObject falsegoldPanel;
+
     #endregion
+
     private void Awake()
     {
         if (instance == null)
@@ -47,11 +53,11 @@ public class PopupManager : MonoBehaviour
     public void OpenOptionPanel()
     {
         optionPanel = CreatePanel(optionPanel,option);
-        Openpanel(optionPanel, uiCanvas, 1);
+        OpenPanel(optionPanel, uiCanvas, 1);
     }
     public void CloseOptionBtn()
     {
-        Closepanel(optionPanel, enCanvas, 2);
+        ClosePanel(optionPanel, enCanvas, 2);
     }
     #endregion
 
@@ -59,12 +65,12 @@ public class PopupManager : MonoBehaviour
     public void OpenMerInfoPanel(merDatamanger manager)
     {
         merInfoPanel = CreatePanel(merInfoPanel,merInfo);
-        Openpanel(merInfoPanel, uiCanvas, 1);
+        OpenPanel(merInfoPanel, uiCanvas, 1);
         merInfoPanel.GetComponent<MerInfoPanel>().SetData(manager);
     }
     public void CloseMerInfoBtn()
     {
-        Closepanel(merInfoPanel, enCanvas, 3);
+        ClosePanel(merInfoPanel, enCanvas, 3);
     }
     #endregion
 
@@ -72,11 +78,11 @@ public class PopupManager : MonoBehaviour
     public void OpenfalsePop()
     {
         falsePanel = CreatePanel(falsePanel,falsePop);
-        Openpanel(falsePanel,uiCanvas, 1);
+        OpenPanel(falsePanel,uiCanvas, 1);
     }
     public void CloseFalsePop()
     {
-        Closepanel(falsePanel,enCanvas, 2);
+        ClosePanel(falsePanel,enCanvas, 2);
     }
     #endregion
 
@@ -84,11 +90,11 @@ public class PopupManager : MonoBehaviour
     public void OpenMenuPopup()
     {
         menuPanel = CreatePanel(menuPanel,menuPop);
-        Openpanel(menuPanel,uiCanvas, 1);
+        OpenPanel(menuPanel,uiCanvas, 1);
     }
     public void CloseMenuBtn()
     {
-        Closepanel(menuPanel, enCanvas, 3);
+        ClosePanel(menuPanel, enCanvas, 3);
     }
     #endregion
 
@@ -96,11 +102,11 @@ public class PopupManager : MonoBehaviour
     public void OpenMerListPopup()
     {
         merListPanel = CreatePanel(merListPanel,merListpop);
-        Openpanel(merListPanel, uiCanvas, 1);
+        OpenPanel(merListPanel, uiCanvas, 1);
     }
     public void CloseMerListPanel()
     {
-        Closepanel(merListPanel,enCanvas, 2);
+        ClosePanel(merListPanel,enCanvas, 2);
     }
     #endregion
 
@@ -108,12 +114,12 @@ public class PopupManager : MonoBehaviour
     public void OpenMerStatPopUp(Mercenary mer)
     {
         merStatPanel = CreatePanel(merStatPanel,merStatPop);
-        Openpanel(merStatPanel, uiCanvas, 1);
+        OpenPanel(merStatPanel, uiCanvas, 1);
         merStatPanel.GetComponent<MerListInfoPanel>().SetData(mer);          
     }
     public void CloseMerStatPanel()
     {
-        Closepanel(merStatPanel, enCanvas,2);
+        ClosePanel(merStatPanel, enCanvas,2);
     }
     #endregion
 
@@ -121,11 +127,11 @@ public class PopupManager : MonoBehaviour
     public void OpenPartysZeroPop()
     {
         PartysZeroPanel = CreatePanel(PartysZeroPanel,PartysZeroPop);
-        Openpanel(PartysZeroPanel,uiCanvas,1);
+        OpenPanel(PartysZeroPanel,uiCanvas,1);
     }
     public void ClosePartysZeroPanel()
     {
-        Closepanel(PartysZeroPanel,enCanvas, 3);
+        ClosePanel(PartysZeroPanel,enCanvas, 3);
     }
     #endregion
 
@@ -133,11 +139,23 @@ public class PopupManager : MonoBehaviour
     public void OpenPartysNotFourPop()
     {
         NotFourPanel = CreatePanel(NotFourPanel, NotFourPop);
-        Openpanel(NotFourPanel,uiCanvas,1);
+        OpenPanel(NotFourPanel,uiCanvas,1);
     }
     public void ClosePartysNotFourPanel()
     {
-        Closepanel(NotFourPanel,enCanvas,3);
+        ClosePanel(NotFourPanel,enCanvas,3);
+    }
+    #endregion
+
+    #region °ñµåºÎÁ·ÆË¾÷
+    public void OpenFalseGoldPop()
+    {
+        falsegoldPanel = CreatePanel(falsegoldPanel, falsegold);
+        OpenPanel(falsegoldPanel,uiCanvas,1);
+    }
+    public void CloseFalseGoldPanel()
+    {
+        ClosePanel(falsegoldPanel, enCanvas, 2);
     }
     #endregion
 
@@ -149,21 +167,21 @@ public class PopupManager : MonoBehaviour
 
         return panel;
     }
-    public void Openpanel(GameObject panel, Canvas canvas,int i) // °Á 1³ÖÀ¸¸éµÊ
+    public void OpenPanel(GameObject panel, Canvas canvas,int i) // °Á 1³ÖÀ¸¸éµÊ
     {
         ChangeParent(panel, canvas);
         panel.SetActive(true);
 
-        setdimpos(i);
+        SetDimPos(i);
         panel.transform.SetAsLastSibling();
     }
-    public void Closepanel(GameObject panel, Canvas canvas,int i) // Ã³À½¿©´Â ÆË¾÷ÀÏ°æ¿ì 3 ±×´ÙÀ½ ÄÑ´ÂÆË¾÷ 2
+    public void ClosePanel(GameObject panel, Canvas canvas,int i) // Ã³À½¿©´Â ÆË¾÷ÀÏ°æ¿ì 3 ±×´ÙÀ½ ÄÑ´ÂÆË¾÷ 2
     {
         panel.SetActive(false);
         ChangeParent(panel, canvas);
-        setdimpos(i);
+        SetDimPos(i);
     }
-    void setdimpos(int i)
+    void SetDimPos(int i)
     {
         dim.transform.SetSiblingIndex(uiCanvas.transform.childCount - i);
     }
