@@ -105,7 +105,6 @@ public class BattleUnitManager : MonoBehaviour
 
         foreach (BattleMercenary mer in partys)
         {
-            Debug.Log(mer.name);
             mer.SetTurnMark(false);
         }
         foreach(BattleMonster mon in monsters)

@@ -1,5 +1,3 @@
-using Unity.Android.Gradle.Manifest;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -9,7 +7,6 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] BattleMercenary battleMercenary;
     [SerializeField] MonsterData monsterData;
     [SerializeField] ChestData chestData;
-
     public ChestB chest;
     private void Awake()
     {
@@ -43,6 +40,7 @@ public class SpawnManager : MonoBehaviour
         Chest data = chestData.chests.Find(x => x.id == id);
         ChestB chest = Instantiate(data.chest, pos);
         this.chest = chest;
+        chest.SetData(data);
         return chest;
     }
 }

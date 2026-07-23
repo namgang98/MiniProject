@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class WeaponRandomTable : MonoBehaviour
 {
+    public static WeaponRandomTable instance;
     [SerializeField] WeaponData weaponData;
     [SerializeField] GradeData gradeData;
 
     int nextID;
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else 
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+
         nextID = 1100;
     }
 

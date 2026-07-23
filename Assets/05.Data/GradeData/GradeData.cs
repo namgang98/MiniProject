@@ -13,11 +13,12 @@ public enum Grades
 public class Grade
 {
     public Grades grades;
+    public Color gradeColor;
 
     public int str;
     public int intel;
     public int dex;
-
+    
     public int skillcount;
     public Grade(Grades grades, int str, int intel, int dex, int skillcount)
     {

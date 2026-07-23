@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class ChestB : MonoBehaviour
 {
+    public Chest Data { get; private set; }
+    public List<int> itemIDs = new();
     [SerializeField] Button Btn;
 
     private void Start()
     {
         Btn.onClick.AddListener(OpenChest);
-        //드롭아이템을 체스트인벤리스트에 넣기
     }
 
     public void OpenChest()
@@ -17,4 +18,28 @@ public class ChestB : MonoBehaviour
         DungeunUIManager.instance.OpenChestPop(this);
 
     }
+    public void SetData(Chest data)
+    {
+        Data = data;
+
+        if(data != null && data.rewardids != null)
+        {
+            List<Item> winItems = ItemDropManager.instance.GetRandomSpawnItem(data.rewardids);
+
+            itemIDs.Clear();
+            foreach(var item in winItems)
+            {
+                itemIDs.Add(item.id);
+            }
+
+        }
+    }
+    public void RemoveItem(int id)
+    {
+        if(itemIDs.Contains(id))
+        {
+            itemIDs.Remove(id);
+        }    
+    }
+
 }

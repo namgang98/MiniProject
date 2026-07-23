@@ -15,4 +15,4 @@ MonoBehaviour:
   chests:
   - id: 6
     chest: {fileID: 7930158330059593812, guid: 8bddd9dfa3053214d9fef88cbf5a240c, type: 3}
-    rewardids: 00000000
+    rewardids: c8000000c9000000d2000000

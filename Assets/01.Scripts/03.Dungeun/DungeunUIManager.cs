@@ -8,7 +8,7 @@ public class DungeunUIManager : MonoBehaviour
 
     [SerializeField] Canvas uiCanvas;
     [SerializeField] Canvas battleCanvas;
-
+    [SerializeField] GameObject dim;
     [SerializeField] StatPanel statPanel;
 
     [SerializeField] GameObject chestpop;
@@ -18,6 +18,7 @@ public class DungeunUIManager : MonoBehaviour
     [SerializeField] GameObject nextBTN;
 
     [SerializeField] SkillPanel skillPanel;
+    [SerializeField] ChestPanel chestPanel;
 
 
     private void Awake()
@@ -56,10 +57,15 @@ public class DungeunUIManager : MonoBehaviour
     {
         chestpop.SetActive(true);
         this.chest = chest;
+
+        ChestPanel panel = chestpop.GetComponent<ChestPanel>();
+        panel.SetChest(chest);
+        dim.SetActive(true);
     }
     public void CloseChestPop()
     {
         chestpop.SetActive(false);
+        dim.SetActive(false);
     }
     #endregion
 
@@ -70,11 +76,13 @@ public class DungeunUIManager : MonoBehaviour
     }
     public void CloseChoisPanel()
     {
+        chestPanel.Clear();
         choisPanel.SetActive(false);
         nextBTN.SetActive(true);
     }
     public void OpenClearPanel()
     {
+        chestPanel.Clear();
         choisPanel.SetActive(true);
         nextBTN.SetActive(false);
     }

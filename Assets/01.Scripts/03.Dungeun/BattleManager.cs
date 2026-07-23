@@ -116,6 +116,7 @@ public class BattleManager : MonoBehaviour
     void Win()
     {
         //몬스터포스2에 드랍아이템 들어 있는 상자스폰 
+        BattleUnitManager.instance.OffTurnMask();
         SpawnChest();
     }
     #endregion

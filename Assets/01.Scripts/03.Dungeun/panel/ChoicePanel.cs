@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChoisPanel : MonoBehaviour
+public class ChoicePanel : MonoBehaviour
 {
     [SerializeField] Button exitBTN;
     [SerializeField] Button nextBTN;
@@ -20,14 +20,8 @@ public class ChoisPanel : MonoBehaviour
     }
     public void ClickNext()
     {
-        BattleUnitManager.instance.OffTurnMask();
         DungeunUIManager.instance.CloseChoisPanel();
         Destroy(SpawnManager.instance.chest.gameObject);
         BattleManager.instance.Next();
     }
-
-
-
-
-
 }

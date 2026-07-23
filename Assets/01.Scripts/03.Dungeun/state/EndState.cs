@@ -9,8 +9,12 @@ public class EndState : BaseState
     {
         BattleUnit unit = TurnManager.instance.GetCurrentUnits();
         unit.SetTurnMark(false);
-        TurnManager.instance.NextTurn();
-        machin.ChangeState(machin.startState);
+
+        if (BattleUnitManager.instance.partys.Count > 0 && BattleUnitManager.instance.monsters.Count > 0)
+        {
+            TurnManager.instance.NextTurn();
+            machin.ChangeState(machin.startState);
+        }
     }
     public override void Exit()
     {
