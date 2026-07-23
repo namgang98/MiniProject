@@ -6,12 +6,13 @@ public class Mercenary
 {
     public int uniqueID;
     public string name;
-    public int totalStr;
-    public int totalInt;
-    public int totalDex;
+    public int totalStr => str + weapon.str;
+    public int totalInt => intel + weapon.intel;
+    public int totalDex => dex + weapon.dex;
 
     public int level;
     public int exp;
+    public int maxexp;
     public int statpoint;
 
     public float hp;
@@ -31,11 +32,9 @@ public class Mercenary
         this.uniqueID = uniqueID;
         this.name = name;
 
-        this.totalStr = str; //+ weapon.str + armor.str;
-        this.totalInt = intel;
-        this.totalDex = dex;
         this.level = 1;
         this.exp = 0;
+        this.maxexp = 100;
         this.statpoint = 0;
         this.maxHp = 100;
         this.hp = maxHp;
@@ -47,5 +46,19 @@ public class Mercenary
 
         this.hairNum = hairNum;
         this.hairColorNum = hairColorNum;
+    }
+    public void AddEXP(int exp)
+    {
+        this.exp += exp;
+        while(this.exp >= maxexp)
+        {
+            this.exp -= maxexp;
+            LevelUP();
+        }
+    }
+    public void LevelUP()
+    {
+        level++;
+        statpoint += 3;
     }
 }

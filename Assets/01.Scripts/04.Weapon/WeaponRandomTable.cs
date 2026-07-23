@@ -25,7 +25,7 @@ public class WeaponRandomTable : MonoBehaviour
 
         Weapon weapon = weaponData.weapons[Random.Range(0, weaponData.weapons.Count)];
         Grade grade = gradeData.grades[Random.Range(0, gradeData.grades.Count)];
-
+        string weaponname = weapon.name;
         int weaponID = weapon.id;
         int str = grade.str;
         int intel = grade.intel;
@@ -33,6 +33,6 @@ public class WeaponRandomTable : MonoBehaviour
 
 
 
-        return new HaveWeapon(uniqueID,weaponID,grade,str,intel,dex);
+        return new HaveWeapon(uniqueID,weaponID, weaponname, grade,str,intel,dex);
     }
 }

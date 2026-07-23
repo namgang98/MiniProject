@@ -97,7 +97,6 @@ public class BattleManager : MonoBehaviour
     }   
     public void DieMonster(BattleMonster mon)
     {
-        AddExp(mon.Data.exp);
         TurnManager.instance.RemoveUnit(mon);
         BattleUnitManager.instance.RemoveMon(mon);
         if(BattleUnitManager.instance.IsMonsterEmpty())
@@ -110,7 +109,7 @@ public class BattleManager : MonoBehaviour
             if (mer == null)
                 continue;
 
-            mer.exp += exp;
+            mer.AddEXP(exp);
         }
     }
     void Win()

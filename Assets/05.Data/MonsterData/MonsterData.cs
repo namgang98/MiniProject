@@ -11,7 +11,6 @@ public class Monster
     public int str;
     public int intel;
     public int dex;
-    public int exp;
 
     [SerializeField] public BattleMonster prefab; 
     public List<int> skillID;

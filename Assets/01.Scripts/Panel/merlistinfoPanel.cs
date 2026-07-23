@@ -17,25 +17,49 @@ public class MerListInfoPanel : MonoBehaviour
 
     [SerializeField] portaitUI PortaitUI;
 
+    [SerializeField] GameObject weaponIcon;
+    [SerializeField] TextMeshProUGUI weaponName;
+    [SerializeField] TextMeshProUGUI weaponGrade;
+    [SerializeField] TextMeshProUGUI weaponSTR;
+    [SerializeField] TextMeshProUGUI weaponInt;
+    [SerializeField] TextMeshProUGUI weaponDex;
+    [SerializeField] Button unequipBtn;
+
+    [SerializeField] Button byeMer;
+
     private Mercenary saveData;
 
     public void SetData(Mercenary data)
     {
         saveData = data;
+        RefreshStatUI();
 
-        nameText.text = data.name;
-        lvText.text = data.level.ToString();
-        
-        totalStrText.text = data.totalStr.ToString();
-        totalIntText.text = data.totalInt.ToString();
-        totalDexText.text = data.totalDex.ToString();
+    }
+    public void RefreshStatUI()
+    {
+        nameText.text = saveData.name;
+        lvText.text = saveData.level.ToString();
 
-        statpointText.text = data.statpoint.ToString();
-        strText.text = data.str.ToString();
-        intText.text = data.intel.ToString();
-        dexText.text = data.dex.ToString();
+        totalStrText.text = saveData.totalStr.ToString();
+        totalIntText.text = saveData.totalInt.ToString();
+        totalDexText.text = saveData.totalDex.ToString();
 
-        SetPortait(data);
+        statpointText.text = saveData.statpoint.ToString();
+        strText.text = saveData.str.ToString();
+        intText.text = saveData.intel.ToString();
+        dexText.text = saveData.dex.ToString();
+
+
+
+        SetPortait(saveData);
+    }
+    public void RefreshWeaponUI()
+    {
+        weaponName.text = saveData.weapon.name;
+        weaponGrade.text = saveData.weapon.grade.ToString();
+        weaponSTR.text = saveData.weapon.str.ToString();
+        weaponInt.text = saveData.weapon.intel.ToString();
+        weaponDex.text = saveData.weapon.dex.ToString();
     }
     #region Èû¾÷¹öÆ°
     public void UpSTR()
@@ -100,5 +124,9 @@ public class MerListInfoPanel : MonoBehaviour
     public void ClosePanel()
     {
         PopupManager.instance.CloseMerStatPanel();
+    }
+    public void ByeMer()
+    {
+        MercenaryManager.instance.ReMoveMercenary(saveData);
     }
 }

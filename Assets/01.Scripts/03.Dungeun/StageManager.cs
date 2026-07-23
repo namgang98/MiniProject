@@ -27,6 +27,7 @@ public class StageManager : MonoBehaviour
     public void NextStage()
     {
         currentStageID++;
+        BattleManager.instance.AddExp(20);
         LoadStage();
     }
     public bool IsLastStage()
