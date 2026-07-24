@@ -13,7 +13,7 @@ public class MerListPanel : MonoBehaviour
         Refresh();
     }
 
-    void Refresh()
+   public void Refresh()
     {
         foreach(Transform child in conten)
         {

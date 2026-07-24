@@ -3480,6 +3480,7 @@ MonoBehaviour:
   uicavas: {fileID: 775158784}
   encanvas: {fileID: 754916455}
   dim: {fileID: 60857858}
+  dungunpanel: {fileID: 1665550906}
 --- !u!4 &1411174060
 Transform:
   m_ObjectHideFlags: 0

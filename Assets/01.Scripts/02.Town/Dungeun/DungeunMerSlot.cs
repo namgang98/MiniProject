@@ -9,7 +9,10 @@ public class DungeunMerSlot : MonoBehaviour
     [SerializeField] GameObject dim;
     Mercenary saveData;
     DungeunPanel panel;
-
+    public void Start()
+    {
+        addBTN.onClick.AddListener(Addparty);
+    }
     public void SetData(Mercenary mer, DungeunPanel panel)
     {
         saveData = mer;
@@ -19,7 +22,7 @@ public class DungeunMerSlot : MonoBehaviour
 
         dim.SetActive(MercenaryManager.instance.IsInParty(mer));
     }
-    public void addparty()
+    public void Addparty()
     {
         panel.AddParty(saveData);
     }

@@ -29,4 +29,19 @@ public class InventoryManager : MonoBehaviour
     {
         weapons.Add(weapon);
     }
+
+    public void ClearInven()
+    {
+        items.Clear();
+        equipments.Clear();
+        weapons.Clear();
+    }
+
+    public void SwapWeapon(Mercenary mer, HaveWeapon weapon)
+    {
+        if (mer.weapon != null)
+            weapons.Add(mer.weapon);
+        weapons.Remove(weapon);
+        mer.weapon = weapon;
+    }
 }

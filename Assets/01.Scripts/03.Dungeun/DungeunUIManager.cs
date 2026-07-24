@@ -20,6 +20,9 @@ public class DungeunUIManager : MonoBehaviour
     [SerializeField] SkillPanel skillPanel;
     [SerializeField] ChestPanel chestPanel;
 
+    [SerializeField] GameObject invenPanel;
+    [SerializeField] Button invenBtn;
+
 
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class DungeunUIManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+        invenBtn.onClick.AddListener(OpenInven);
     }
     #region ½ºÅ³ÆÇ³Ú
     public void OpenSkillPanel(BattleMercenary mer)
@@ -85,6 +89,19 @@ public class DungeunUIManager : MonoBehaviour
         chestPanel.Clear();
         choisPanel.SetActive(true);
         nextBTN.SetActive(false);
+    }
+    #endregion
+
+    #region ÀÎº¥ÆÇ³Ú
+    public void OpenInven()
+    {
+        invenPanel.SetActive(true);
+        dim.SetActive(true);
+    }
+    public void CloseInven()
+    {
+        invenPanel.SetActive(false);
+        dim.SetActive(false);
     }
     #endregion
 }

@@ -9,6 +9,7 @@ public class TownBTNAdder : MonoBehaviour
     [SerializeField] Canvas uicavas;
     [SerializeField] Canvas encanvas;
     [SerializeField] GameObject dim;
+    [SerializeField] GameObject dungunpanel;
     private void Start()
     {
         menuBtn.onClick.AddListener(PopupManager.instance.OpenMenuPopup);
@@ -16,5 +17,6 @@ public class TownBTNAdder : MonoBehaviour
         PopupManager.instance.SetCanvas(uicavas);
         PopupManager.instance.SetEnCanvas(encanvas);
         PopupManager.instance.SetDim(dim);
+        PopupManager.instance.SetDungeunPanel(dungunpanel);
     }
 }

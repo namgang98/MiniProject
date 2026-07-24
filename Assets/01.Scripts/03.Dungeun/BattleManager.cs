@@ -15,6 +15,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform[] partyPos;
     [SerializeField] Transform[] monsPos;
 
+    public bool isBattle = true;
     private void Awake()
     {
         if (instance == null)
@@ -49,6 +50,7 @@ public class BattleManager : MonoBehaviour
         TurnManager.instance.SetTurn(BattleUnitManager.instance.GetBattleUnit());
 
         stateMachin.ChangeState(stateMachin.startState);
+        isBattle = false;
     }
     #region 스폰
     void SpawnParty()
@@ -115,6 +117,7 @@ public class BattleManager : MonoBehaviour
     void Win()
     {
         //몬스터포스2에 드랍아이템 들어 있는 상자스폰 
+        isBattle = false;
         BattleUnitManager.instance.OffTurnMask();
         SpawnChest();
     }
@@ -122,7 +125,7 @@ public class BattleManager : MonoBehaviour
     public void SpawnChest()
     {
         Stage stage = StageManager.instance.Stage;
-
+        AddExp(20);
         SpawnManager.instance.SpawnChest(monsPos[1],stage.chestid);
 
     }

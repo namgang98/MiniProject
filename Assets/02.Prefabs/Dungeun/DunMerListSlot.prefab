@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DungeunMerSlot
   portaitUI: {fileID: 7645246098730025652}
-  addBTN: {fileID: 0}
+  addBTN: {fileID: 6153963134308811874}
   dim: {fileID: 6203758489338953592}
 --- !u!114 &7363161451416642615
 MonoBehaviour:

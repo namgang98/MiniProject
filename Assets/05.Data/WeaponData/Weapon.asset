@@ -15,6 +15,7 @@ MonoBehaviour:
   skillData: {fileID: 0}
   weapons:
   - id: 11
+    itemid: 210
     name: Sword
     weapons: 0
     grade: {fileID: 11400000, guid: 70a678dc97524a94e85a7e60c12e896d, type: 2}

@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class PopupManager : MonoBehaviour
 {
@@ -24,8 +22,9 @@ public class PopupManager : MonoBehaviour
     GameObject menuPanel;
 
     [SerializeField] GameObject merListpop;
-    GameObject merListPanel;
-
+    GameObject merListPanel; // 진짜 판넬
+    GameObject merlistpanel; // 추방 후 초기화를 위한 연결고리
+    GameObject dungeunPanel;
     [SerializeField] GameObject merStatPop;
     GameObject merStatPanel;
 
@@ -103,6 +102,7 @@ public class PopupManager : MonoBehaviour
     {
         merListPanel = CreatePanel(merListPanel,merListpop);
         OpenPanel(merListPanel, uiCanvas, 1);
+        merlistpanel = merListPanel;
     }
     public void CloseMerListPanel()
     {
@@ -115,11 +115,14 @@ public class PopupManager : MonoBehaviour
     {
         merStatPanel = CreatePanel(merStatPanel,merStatPop);
         OpenPanel(merStatPanel, uiCanvas, 1);
+        
         merStatPanel.GetComponent<MerListInfoPanel>().SetData(mer);          
     }
-    public void CloseMerStatPanel()
+    public void CloseMerStatPanel(Mercenary mer)
     {
         ClosePanel(merStatPanel, enCanvas,2);
+        merlistpanel.GetComponent<MerListPanel>().Refresh();
+        dungeunPanel.GetComponent<DungeunPanel>().byemer(mer);
     }
     #endregion
 
@@ -203,6 +206,10 @@ public class PopupManager : MonoBehaviour
     public void SetEnCanvas(Canvas canvas)
     {
         enCanvas = canvas;
+    }
+    public void SetDungeunPanel(GameObject panel)
+    {
+        dungeunPanel = panel;
     }
     #endregion
 }

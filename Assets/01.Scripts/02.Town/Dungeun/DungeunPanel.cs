@@ -6,7 +6,6 @@ public class DungeunPanel : MonoBehaviour
     [SerializeField] Transform listContent;
 
     [SerializeField] DungeunPartySlot[] partySlot;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnEnable()
     {
         MercenaryManager.instance.ClearParty();
@@ -60,6 +59,11 @@ public class DungeunPanel : MonoBehaviour
     public void RemoveParty(Mercenary mer)
     {
         if(MercenaryManager.instance.IsReMoveParty(mer))
+        Refresh();
+    }
+    public void byemer(Mercenary mer)
+    {
+        RemoveParty(mer);
         Refresh();
     }
 }

@@ -25,6 +25,8 @@ public class portaitUI : MonoBehaviour
     {
         foreach (Transform child in porpos)
         {
+            child.gameObject.SetActive(false);
+
             Destroy(child.gameObject);
         }
     }

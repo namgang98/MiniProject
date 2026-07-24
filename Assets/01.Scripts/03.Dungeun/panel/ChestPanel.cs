@@ -4,14 +4,15 @@ using UnityEngine.UI;
 public class ChestPanel : MonoBehaviour
 {
     [SerializeField] Button closeBtn;
-    [SerializeField] ChestSlot[] slots;
+    [SerializeField] Transform content;
+    [SerializeField] GameObject slotPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         closeBtn.onClick.AddListener(CloseChest);
     }
-
+    
     public void SetChest(ChestB chestb)
     {
         Clear();
@@ -19,19 +20,16 @@ public class ChestPanel : MonoBehaviour
         if(chestb == null)
             return;
         
-        for(int i = 0; i < slots.Length; i++)
+        for(int i = 0; i < chestb.itemIDs.Count; i++)
         {
-            if(i < chestb.itemIDs.Count)
-            {            
-                Item item = ItemDropManager.instance.Getitem(chestb.itemIDs[i]);
-                if (item != null)
-                {
-                    slots[i].SetData(item, chestb);
-                }
-                else
-                {
-                    slots[i].gameObject.SetActive(false);
-                }
+            Item item = ItemDropManager.instance.Getitem(chestb.itemIDs[i]);
+            if(item != null)
+            {    
+                GameObject slots = Instantiate(slotPrefab, content);
+                ChestSlot slot = slots.GetComponent<ChestSlot>();
+
+                if (slot != null)
+                    slot.SetData(item,chestb);                
             }
         }
 
@@ -53,11 +51,12 @@ public class ChestPanel : MonoBehaviour
     }
     public void Clear()
     {
-        if (slots == null)
+        if (content == null)
             return;
-        foreach (var slot in slots)
+
+        foreach (Transform child in content)
         {
-            slot.Clear();
+            Destroy(child.gameObject);
         }
     }
 }

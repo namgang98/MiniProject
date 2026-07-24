@@ -1,6 +1,6 @@
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MerListInfoPanel : MonoBehaviour
 {
@@ -17,7 +17,8 @@ public class MerListInfoPanel : MonoBehaviour
 
     [SerializeField] portaitUI PortaitUI;
 
-    [SerializeField] GameObject weaponIcon;
+    GameObject currentIcon;
+    [SerializeField] Transform iconPos;
     [SerializeField] TextMeshProUGUI weaponName;
     [SerializeField] TextMeshProUGUI weaponGrade;
     [SerializeField] TextMeshProUGUI weaponSTR;
@@ -33,7 +34,7 @@ public class MerListInfoPanel : MonoBehaviour
     {
         saveData = data;
         RefreshStatUI();
-
+        RefreshWeaponUI();
     }
     public void RefreshStatUI()
     {
@@ -55,6 +56,29 @@ public class MerListInfoPanel : MonoBehaviour
     }
     public void RefreshWeaponUI()
     {
+        if(currentIcon != null)
+        {
+            Destroy(currentIcon);
+            currentIcon = null;
+        }
+        if (saveData == null || saveData.weapon == null)
+            return;
+
+        Item weapon = ItemDropManager.instance.Getitem(saveData.weapon.weaponiconID);
+       
+        if(weapon != null && weapon.icon != null)
+        {
+            currentIcon = Instantiate(weapon.icon, iconPos);
+            Image iconimg = currentIcon.GetComponent<Image>();
+            if (iconimg != null)
+            {
+                iconimg.color = Color.white;
+                if(saveData.weapon.grade != null)
+                {
+                    iconimg.color = saveData.weapon.grade.gradeColor;
+                }
+            }
+        }    
         weaponName.text = saveData.weapon.name;
         weaponGrade.text = saveData.weapon.grade.ToString();
         weaponSTR.text = saveData.weapon.str.ToString();
@@ -123,10 +147,11 @@ public class MerListInfoPanel : MonoBehaviour
 
     public void ClosePanel()
     {
-        PopupManager.instance.CloseMerStatPanel();
+        PopupManager.instance.CloseMerStatPanel(saveData);
     }
     public void ByeMer()
     {
         MercenaryManager.instance.ReMoveMercenary(saveData);
+        ClosePanel();
     }
 }

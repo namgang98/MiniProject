@@ -27,12 +27,13 @@ public class WeaponRandomTable : MonoBehaviour
         Grade grade = gradeData.grades[Random.Range(0, gradeData.grades.Count)];
         string weaponname = weapon.name;
         int weaponID = weapon.id;
+        int iconid = weapon.itemid;
         int str = grade.str;
         int intel = grade.intel;
         int dex = grade.dex;
 
 
 
-        return new HaveWeapon(uniqueID,weaponID, weaponname, grade,str,intel,dex);
+        return new HaveWeapon(uniqueID,weaponID,iconid, weaponname, grade,str,intel,dex);
     }
 }

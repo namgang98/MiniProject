@@ -14,6 +14,7 @@ public enum Weapons
 public class Weapon
 {
     public int id;
+    public int itemid;
     public string name;
     public Weapons weapons;
     public GradeData grade;
