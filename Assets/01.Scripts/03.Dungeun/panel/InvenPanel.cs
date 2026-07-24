@@ -8,6 +8,11 @@ public class InvenPanel : MonoBehaviour
     [SerializeField] GameObject slotPrefab;
     [SerializeField] Button close;
 
+    [SerializeField] portaitUI[] portaits;
+    [SerializeField] InvenSlot[] weaponslots;
+    [SerializeField] GameObject weapons;
+    [SerializeField] GameObject helmets;
+    [SerializeField] GameObject armors;
     private void Awake()
     {
         close.onClick.AddListener(ClosePanel);
@@ -19,6 +24,12 @@ public class InvenPanel : MonoBehaviour
 
     public void RefreshUI()
     {
+        bool isBattle = BattleManager.instance.isBattle;
+
+        BattleUI(isBattle);
+
+        RefreshMerUI();
+
         Clear();
 
         foreach(HaveWeapon weapon in InventoryManager.instance.weapons)
@@ -53,6 +64,29 @@ public class InvenPanel : MonoBehaviour
 
         }
     }
+    void RefreshMerUI()
+    {
+        Mercenary[] party = MercenaryManager.instance.party;
+
+        for(int i = 0; i < party.Length;i++)
+        {
+            if(i < portaits.Length && portaits[i] != null)
+            {
+                if (party[i] != null)
+                    portaits[i].SetPortait(party[i]);
+                else
+                    portaits[i].Clear();
+            }
+
+            if (i < weaponslots.Length && weaponslots != null)
+            {
+                    if (party[i] != null)
+                    weaponslots[i].SetWeaponicon(party[i].weapon);
+                    else
+                    weaponslots[i].Clear();
+                }
+            }
+        }
     public void Clear()
     {
         if (content == null)
@@ -65,6 +99,14 @@ public class InvenPanel : MonoBehaviour
     public void ClosePanel()
     {
         DungeunUIManager.instance.CloseInven();
+    }
+    void BattleUI(bool isbattle)
+    {
+        bool battle = !isbattle;
+
+        weapons.gameObject.SetActive(battle);
+        helmets.gameObject.SetActive(battle);
+        armors.gameObject.SetActive(battle);
     }
 
 }

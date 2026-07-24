@@ -15,7 +15,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform[] partyPos;
     [SerializeField] Transform[] monsPos;
 
-    public bool isBattle = true;
+    public bool isBattle;
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +28,7 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
+        isBattle = true;
         StageManager.instance.LoadStage();
 
         SpawnParty();
@@ -50,7 +51,7 @@ public class BattleManager : MonoBehaviour
         TurnManager.instance.SetTurn(BattleUnitManager.instance.GetBattleUnit());
 
         stateMachin.ChangeState(stateMachin.startState);
-        isBattle = false;
+        isBattle = true;
     }
     #region ½ºÆù
     void SpawnParty()
