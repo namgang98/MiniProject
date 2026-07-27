@@ -37,6 +37,9 @@ public class PopupManager : MonoBehaviour
     [SerializeField] GameObject falsegold;
     GameObject falsegoldPanel;
 
+    [SerializeField]GameObject InvenPop;
+    GameObject invenPnael;
+
     #endregion
 
     private void Awake()
@@ -126,6 +129,19 @@ public class PopupManager : MonoBehaviour
     }
     #endregion
 
+    #region 인벤
+    public void OpenInven()
+    {
+        invenPnael = CreatePanel(invenPnael, InvenPop);
+        OpenPanel(invenPnael,uiCanvas,1);
+    }
+    public void CloseInven()
+    {
+        ClosePanel(invenPnael,enCanvas,2);
+    }
+
+    #endregion
+
     #region 파티원없을시 뜨는 팝업
     public void OpenPartysZeroPop()
     {
@@ -162,7 +178,7 @@ public class PopupManager : MonoBehaviour
     }
     #endregion
 
-    #region 함수모음집
+    #region 함수모음집 처음오픈판넬 1 클로즈판넬 처음 3 다음 2
     GameObject CreatePanel(GameObject panel, GameObject pop)
     {
         if (panel == null)
@@ -192,7 +208,7 @@ public class PopupManager : MonoBehaviour
     {
         panel.transform.SetParent(canvas.transform, false);
     }
-    #endregion
+    #endregion 
 
     #region 캔버스연결함수
     public void SetCanvas(Canvas canvas)

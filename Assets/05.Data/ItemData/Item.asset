@@ -15,28 +15,28 @@ MonoBehaviour:
   items:
   - id: 200
     type: 0
+    dropType: 0
     name: Gold
     icon: {fileID: 6823938440361221045, guid: a3e30408e77f0c14a91d749023be1377, type: 3}
     price: 0
     amount: 100
+    velue: 0
     spawnChance: 80
-    minIndex: 0
-    maxIndex: 100
   - id: 201
     type: 1
+    dropType: 2
     name: Posion
     icon: {fileID: 6030383276706584130, guid: 515e15f566794244786dd5e7d05eac25, type: 3}
     price: 50
     amount: 1
+    velue: 20
     spawnChance: 50
-    minIndex: 0
-    maxIndex: 100
   - id: 210
     type: 2
+    dropType: 2
     name: sword
     icon: {fileID: 7851112834732387713, guid: a760eba5cf9c89043a119545d920a9fc, type: 3}
     price: 100
     amount: 1
+    velue: 0
     spawnChance: 30
-    minIndex: 0
-    maxIndex: 100

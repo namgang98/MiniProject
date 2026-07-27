@@ -12,6 +12,8 @@ public class MenuPanel : MonoBehaviour
     {
         if (merBtn != null)
             merBtn.onClick.AddListener(OpenMerList);
+        if (chestBtn != null)
+            chestBtn.onClick.AddListener(OpenInven);
         if (optionBtn != null)
             optionBtn.onClick.AddListener(OpenOption);
         if (closeBtn != null)
@@ -29,6 +31,10 @@ public class MenuPanel : MonoBehaviour
     public void OpenMerList()
     {
         PopupManager.instance.OpenMerListPopup();
+    }
+    public void OpenInven()
+    {
+        PopupManager.instance.OpenInven();
     }
     public void SaveGoMain()
     {

@@ -15,7 +15,7 @@ public class MerListInfoPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI intText;
     [SerializeField] TextMeshProUGUI dexText;
 
-    [SerializeField] portaitUI PortaitUI;
+    [SerializeField] PortaitUI PortaitUI;
 
     GameObject currentIcon;
     [SerializeField] Transform iconPos;

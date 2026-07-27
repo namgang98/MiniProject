@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class portaitUI : MonoBehaviour
+public class PortaitUI : MonoBehaviour
 {
     [SerializeField] CustomData customData;
     [SerializeField] PortaitData portaitData;

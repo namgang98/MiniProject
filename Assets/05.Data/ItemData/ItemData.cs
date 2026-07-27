@@ -9,16 +9,24 @@ public enum ItemType
     Weapon,
     Equipment
 }
+public enum ItemDropType
+{
+    Dungeun,
+    Shop,
+    All
+}
 
 [Serializable]
 public class Item
 {
     public int id;
     public ItemType type;
+    public ItemDropType dropType;
     public string name;
     public GameObject icon;
     public int price;
     public int amount;
+    public int velue;
 
     public float spawnChance;
 }

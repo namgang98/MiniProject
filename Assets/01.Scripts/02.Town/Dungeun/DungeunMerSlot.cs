@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class DungeunMerSlot : MonoBehaviour
 {
-    [SerializeField] portaitUI portaitUI;
+    [SerializeField] PortaitUI portaitUI;
     [SerializeField] Button addBTN;
 
     [SerializeField] GameObject dim;

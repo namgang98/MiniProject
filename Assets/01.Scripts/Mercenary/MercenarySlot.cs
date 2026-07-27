@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MercenarySlot : MonoBehaviour
 {
-    [SerializeField] portaitUI portaitUI;
+    [SerializeField] PortaitUI portaitUI;
     [SerializeField] Button openstatBTN;
 
     Mercenary saveData;

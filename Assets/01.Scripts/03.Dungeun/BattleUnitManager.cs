@@ -112,4 +112,8 @@ public class BattleUnitManager : MonoBehaviour
             mon.SetTurnMark(false);
         }
     }
+    public BattleMercenary FindBattlemer(Mercenary data)    
+    {
+        return partys.Find(x => x.Data == data);
+    }
 }

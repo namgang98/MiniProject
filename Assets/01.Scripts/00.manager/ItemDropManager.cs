@@ -39,4 +39,25 @@ public class ItemDropManager : MonoBehaviour
 
         return dropItems;
     }
+    public List<Item> GetRandomShopItem(int count)
+    {
+        List <Item> dropItems = new();
+        List<Item> shopItems = new();
+
+        foreach(Item item in itemData.items)
+        {
+            if(item.dropType == ItemDropType.Shop || item.dropType == ItemDropType.All)
+            {
+                shopItems.Add(item);
+            }
+        }
+        while(dropItems.Count < count && shopItems.Count > 0)
+        {
+            int index = Random.Range(0, shopItems.Count);
+
+            dropItems.Add(shopItems[index]);
+
+        }
+        return dropItems;
+    }
 }

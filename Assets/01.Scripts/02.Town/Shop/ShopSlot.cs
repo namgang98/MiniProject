@@ -1,27 +1,26 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InvenSlot : MonoBehaviour
+public class ShopSlot : MonoBehaviour
 {
     [SerializeField] Transform iconpos;
     [SerializeField] Button selectBtn;
     public Item item;
     public HaveWeapon weapon;
     GameObject icon;
-    
+
     public void SetWeaponicon(HaveWeapon data)
     {
         Clear();
         if (data == null)
             return;
-        
+
         item = ItemDropManager.instance.Getitem(data.weaponiconID);
 
         icon = Instantiate(item.icon, iconpos);
         this.weapon = data;
         Image iconimg = icon.GetComponent<Image>();
-        if(iconimg != null)
+        if (iconimg != null)
         {
             iconimg.color = Color.white;
 
@@ -44,7 +43,7 @@ public class InvenSlot : MonoBehaviour
         item = null;
         weapon = null;
 
-        if(icon != null)
+        if (icon != null)
         {
             Destroy(icon);
             icon = null;
@@ -67,4 +66,3 @@ public class InvenSlot : MonoBehaviour
         }
     }
 }
-

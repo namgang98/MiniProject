@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DungeunPartySlot : MonoBehaviour
 {
-    [SerializeField] portaitUI portaitUI;
+    [SerializeField] PortaitUI portaitUI;
     [SerializeField] Button removeBTN;
 
     Mercenary saveData;

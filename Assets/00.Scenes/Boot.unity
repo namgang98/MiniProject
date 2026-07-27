@@ -365,6 +365,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &151507850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151507852}
+  - component: {fileID: 151507851}
+  m_Layer: 0
+  m_Name: InvenManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &151507851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151507850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41df3e7fdba5cf42a0a8a9f98f49e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  items: 
+  equipments: 
+  weapons: []
+--- !u!4 &151507852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151507850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -96.19627, y: 665.7183, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228036557
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,11 +661,9 @@ MonoBehaviour:
   party:
   - uniqueID: 0
     name: 
-    totalStr: 0
-    totalInt: 0
-    totalDex: 0
     level: 0
     exp: 0
+    maxexp: 0
     statpoint: 0
     hp: 0
     maxHp: 0
@@ -630,6 +675,8 @@ MonoBehaviour:
     weapon:
       uniqueID: 0
       weaponID: 0
+      weaponiconID: 0
+      name: 
       grade:
         grades: 0
         gradeColor: {r: 0, g: 0, b: 0, a: 0}
@@ -642,11 +689,9 @@ MonoBehaviour:
       dex: 0
   - uniqueID: 0
     name: 
-    totalStr: 0
-    totalInt: 0
-    totalDex: 0
     level: 0
     exp: 0
+    maxexp: 0
     statpoint: 0
     hp: 0
     maxHp: 0
@@ -658,6 +703,8 @@ MonoBehaviour:
     weapon:
       uniqueID: 0
       weaponID: 0
+      weaponiconID: 0
+      name: 
       grade:
         grades: 0
         gradeColor: {r: 0, g: 0, b: 0, a: 0}
@@ -670,11 +717,9 @@ MonoBehaviour:
       dex: 0
   - uniqueID: 0
     name: 
-    totalStr: 0
-    totalInt: 0
-    totalDex: 0
     level: 0
     exp: 0
+    maxexp: 0
     statpoint: 0
     hp: 0
     maxHp: 0
@@ -686,6 +731,8 @@ MonoBehaviour:
     weapon:
       uniqueID: 0
       weaponID: 0
+      weaponiconID: 0
+      name: 
       grade:
         grades: 0
         gradeColor: {r: 0, g: 0, b: 0, a: 0}
@@ -698,11 +745,9 @@ MonoBehaviour:
       dex: 0
   - uniqueID: 0
     name: 
-    totalStr: 0
-    totalInt: 0
-    totalDex: 0
     level: 0
     exp: 0
+    maxexp: 0
     statpoint: 0
     hp: 0
     maxHp: 0
@@ -714,6 +759,8 @@ MonoBehaviour:
     weapon:
       uniqueID: 0
       weaponID: 0
+      weaponiconID: 0
+      name: 
       grade:
         grades: 0
         gradeColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1122,6 +1169,7 @@ MonoBehaviour:
   PartysZeroPop: {fileID: 4877760007188503951, guid: c0987f784a081ad4993caa7b14c9589a, type: 3}
   NotFourPop: {fileID: 1160497547797720820, guid: 430f18dadeb13a545954f6fe161c5123, type: 3}
   falsegold: {fileID: 5551530626685130283, guid: c1393ef8403badd4db06ccc2b89dd74c, type: 3}
+  InvenPop: {fileID: 8778891575172234594, guid: 77901c05706cb28459c12b79f757665f, type: 3}
 --- !u!4 &1836918194
 Transform:
   m_ObjectHideFlags: 0
@@ -1298,3 +1346,4 @@ SceneRoots:
   - {fileID: 228036560}
   - {fileID: 859877519}
   - {fileID: 1931297893}
+  - {fileID: 151507852}
