@@ -14,6 +14,7 @@ public class TownPopcontroller : MonoBehaviour
     [SerializeField] GameObject townPanel;
     [SerializeField] GameObject innPanel;
     [SerializeField] GameObject shopPanel;
+    [SerializeField] ShopPanel shop;
     [SerializeField] GameObject dungeunPanel;
     
     [SerializeField] Canvas enCanvas;
@@ -41,6 +42,7 @@ public class TownPopcontroller : MonoBehaviour
     public void ShopIN()
     {
         PanelController(shopPanel,townPanel,uiCanvas,enCanvas);
+        shop.OpenSop();
     }
     public void ShopOUT()
     {

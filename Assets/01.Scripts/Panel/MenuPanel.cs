@@ -38,7 +38,7 @@ public class MenuPanel : MonoBehaviour
     }
     public void SaveGoMain()
     {
-        //세이브코드
         SceneChanger.Instance.Main();
+        SaveLoadManager.instance.Save();
     }
 }

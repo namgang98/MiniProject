@@ -26,6 +26,7 @@ public class MercenaryManager : MonoBehaviour
             return false;
 
         haveMerList.Add(mer);
+        SaveLoadManager.instance.Save();
         return true;
     }
     public void ReMoveMercenary(Mercenary mer)
@@ -35,6 +36,9 @@ public class MercenaryManager : MonoBehaviour
     public void ClearMercenaryList()
     {
         haveMerList.Clear();
+
+        for (int i = 0; i < party.Length; i++)
+            party[i] = null;
     }
     #endregion
 

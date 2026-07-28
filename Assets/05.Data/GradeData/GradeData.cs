@@ -14,7 +14,7 @@ public class Grade
 {
     public Grades grades;
     public Color gradeColor;
-
+    public float priceDifference;
     public int str;
     public int intel;
     public int dex;

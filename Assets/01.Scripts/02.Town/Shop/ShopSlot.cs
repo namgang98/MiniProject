@@ -5,10 +5,15 @@ public class ShopSlot : MonoBehaviour
 {
     [SerializeField] Transform iconpos;
     [SerializeField] Button selectBtn;
-    public Item item;
+    [SerializeField] ShopPanel shopPanel;
     public HaveWeapon weapon;
+    public Item item;
     GameObject icon;
 
+    public void SetPanel(ShopPanel p)
+    {
+        shopPanel = p;
+    }
     public void SetWeaponicon(HaveWeapon data)
     {
         Clear();
@@ -55,14 +60,15 @@ public class ShopSlot : MonoBehaviour
         if (item == null)
             return;
 
-        switch (item.type)
-        {
-            case ItemType.Consumable:
-                InventoryManager.instance.SetSelectItem(item);
-                break;
-            case ItemType.Weapon:
-                InventoryManager.instance.SetSelectWeapon(weapon);
-                break;
-        }
+        shopPanel.Buy(this);
+    }
+    public void SellClick()
+    {
+        SellData data = new();
+
+        data.weapon = weapon;
+        data.item = item;
+
+        shopPanel.AddSellItem(data);
     }
 }

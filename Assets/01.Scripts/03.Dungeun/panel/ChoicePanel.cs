@@ -16,6 +16,7 @@ public class ChoicePanel : MonoBehaviour
         DungeunUIManager.instance.CloseChoisPanel();
         Destroy(SpawnManager.instance.chest.gameObject);
         BattleUnitManager.instance.ExitFullHeal();
+        SaveLoadManager.instance.Save();
         SceneChanger.Instance.Town();
     }
     public void ClickNext()

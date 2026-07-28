@@ -31,8 +31,17 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Dungeun");
         SoundManager.instance.PlayBGM(BGMType.dungeunBGM);
     }
-
-
+    public void NewGame()
+    {
+        SaveLoadManager.instance.NewGame();
+        Town();
+    }
+   
+    public void LoadGame()
+    {
+        SaveLoadManager.instance.Load();
+        Town();
+    }
 
 
     public void ExitGame()

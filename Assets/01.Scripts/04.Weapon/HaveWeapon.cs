@@ -19,11 +19,16 @@ public class HaveWeapon
     {
         this.uniqueID = uniqueID;
         this.weaponID = weaponID;
-        this.weaponiconID = weaponiconid;
+        weaponiconID = weaponiconid;
         this.name = name;
         this.grade = grade;
         this.str = str;
         this.intel = intel;
         this.dex = dex;
+    }
+    public int GetPrice()
+    {
+        //Mathf.RoundToInt > ¹Ý¿Ã¸²
+        return Mathf.RoundToInt(ItemDropManager.instance.Getitem(weaponiconID).price * grade.priceDifference);
     }
 }

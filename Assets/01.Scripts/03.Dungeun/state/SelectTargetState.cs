@@ -22,7 +22,7 @@ public class SelectTargetState : BaseState
     {
         if(Keyboard.current.escapeKey.isPressed)
         {
-            if (caster is BattleMercenary mer)
+            if (caster is BattleMercenary)
             {
                 DungeunUIManager.instance.CloseSkillPanel();
                 machin.ChangeState(machin.startState);

@@ -174,7 +174,7 @@ public class PopupManager : MonoBehaviour
     }
     public void CloseFalseGoldPanel()
     {
-        ClosePanel(falsegoldPanel, enCanvas, 2);
+        ClosePanel(falsegoldPanel, enCanvas, 3);
     }
     #endregion
 

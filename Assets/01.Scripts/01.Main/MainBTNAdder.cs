@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class MainBTNAdder : MonoBehaviour
 {
     [SerializeField] Button startBtn;
+    [SerializeField] Button loadBtn;
     [SerializeField] Button exitBtn;
     [SerializeField] Button optionBtn;
     [SerializeField] Canvas uicavas;
@@ -11,7 +12,8 @@ public class MainBTNAdder : MonoBehaviour
     [SerializeField] GameObject dim;
     private void Start()
     {
-        startBtn.onClick.AddListener(SceneChanger.Instance.Town);
+        startBtn.onClick.AddListener(SceneChanger.Instance.NewGame);
+        loadBtn.onClick.AddListener(SceneChanger.Instance.LoadGame);
         exitBtn.onClick.AddListener(SceneChanger.Instance.ExitGame);
         optionBtn.onClick.AddListener(PopupManager.instance.OpenOptionPanel);
         PopupManager.instance.SetCanvas(uicavas);

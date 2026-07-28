@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void AddItem(int id)
@@ -50,6 +51,7 @@ public class InventoryManager : MonoBehaviour
             weapons.Add(mer.weapon);
         weapons.Remove(weapon);
         mer.weapon = weapon;
+        SaveLoadManager.instance.Save();
     }
     public void SetSelectItem(Item item)
     {
@@ -59,6 +61,7 @@ public class InventoryManager : MonoBehaviour
     {
         items.Remove(item.id);
         SelectItem = null;
+        SaveLoadManager.instance.Save();
     }
 
 }
