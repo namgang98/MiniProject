@@ -42,7 +42,7 @@ public class TownPopcontroller : MonoBehaviour
     public void ShopIN()
     {
         PanelController(shopPanel,townPanel,uiCanvas,enCanvas);
-        shop.OpenSop();
+        shop.OpenShop();
     }
     public void ShopOUT()
     {

@@ -43,6 +43,8 @@ public class GoldManager : MonoBehaviour
     }
     public void UpdateUI()
     {
+        if (goldtext == null)
+            return;
         goldtext.text = $"{HaveGold}G";
     }
 

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
@@ -78,7 +77,13 @@ public class BattleManager : MonoBehaviour
             BattleUnitManager.instance.AddMon(mon);
         }
     }
+    public void SpawnChest()
+    {
+        Stage stage = StageManager.instance.Stage;
+        AddExp(20);
+        SpawnManager.instance.SpawnChest(monsPos[1], stage.chestid);
 
+    }
     #endregion
     #region »ç¸Á°ü·Ã
     public void DieMercenary(BattleMercenary battlemer)
@@ -123,11 +128,5 @@ public class BattleManager : MonoBehaviour
         SpawnChest();
     }
     #endregion
-    public void SpawnChest()
-    {
-        Stage stage = StageManager.instance.Stage;
-        AddExp(20);
-        SpawnManager.instance.SpawnChest(monsPos[1],stage.chestid);
 
-    }
 }

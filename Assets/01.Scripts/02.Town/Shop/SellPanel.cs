@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SellPanel : MonoBehaviour
@@ -51,4 +52,5 @@ public class SellData
 {
     public Item item;
     public HaveWeapon weapon;
+
 }

@@ -63,6 +63,7 @@ public class SaveLoadManager : MonoBehaviour
         InventoryManager.instance.items = new List<int>(loadData.items);
 
         MercenaryManager.instance.haveMerList = new List<Mercenary>(loadData.mercenaries);
+
     }
 
     public void NewGame()

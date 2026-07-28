@@ -33,14 +33,16 @@ public class SceneChanger : MonoBehaviour
     }
     public void NewGame()
     {
-        SaveLoadManager.instance.NewGame();
         Town();
+        SaveLoadManager.instance.NewGame();
+
     }
    
     public void LoadGame()
     {
-        SaveLoadManager.instance.Load();
         Town();
+        SaveLoadManager.instance.Load();
+
     }
 
 
