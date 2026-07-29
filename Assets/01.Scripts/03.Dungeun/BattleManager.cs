@@ -63,7 +63,7 @@ public class BattleManager : MonoBehaviour
                 continue;
 
             BattleMercenary mer = SpawnManager.instance.SpawnMercenary(partyPos[i],data);
-
+            
             BattleUnitManager.instance.AddMer(mer);
         }
     }

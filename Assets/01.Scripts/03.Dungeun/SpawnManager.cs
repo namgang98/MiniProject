@@ -21,6 +21,7 @@ public class SpawnManager : MonoBehaviour
         BattleMercenary mer = Instantiate(battleMercenary,pos);
     
         mer.SetData(data);
+       
 
         return mer;
     }
