@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SelectTargetState : BaseState
@@ -20,7 +18,7 @@ public class SelectTargetState : BaseState
     }
     public override void Update()
     {
-        if(Keyboard.current.escapeKey.isPressed)
+        if(Keyboard.current.escapeKey.isPressed) //ÇÔ¼ö·Î »©±â
         {
             if (caster is BattleMercenary)
             {

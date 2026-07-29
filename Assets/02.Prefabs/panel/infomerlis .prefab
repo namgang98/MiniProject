@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 4948700666428336878}
   - component: {fileID: 2715286877154631036}
   - component: {fileID: 9124270227973523977}
+  - component: {fileID: 3524894380163795872}
   m_Layer: 5
   m_Name: CloseBTN
   m_TagString: Untagged
@@ -446,6 +447,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3524894380163795872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951373377739250465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
 --- !u!1 &966659130844474227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,8 +1365,9 @@ GameObject:
   - component: {fileID: 8531348207181269048}
   - component: {fileID: 1597097763073935120}
   - component: {fileID: 8849650798625387689}
+  - component: {fileID: 168865204317372374}
   m_Layer: 5
-  m_Name: Bye
+  m_Name: BYEBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,6 +1486,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &168865204317372374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2224800215809080980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
 --- !u!1 &2361346514361623060
 GameObject:
   m_ObjectHideFlags: 0

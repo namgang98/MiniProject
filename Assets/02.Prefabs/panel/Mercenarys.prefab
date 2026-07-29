@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 495575396296614757}
   - component: {fileID: 8402333741434995630}
   - component: {fileID: 3889367900754323310}
+  - component: {fileID: 3003719922690076870}
   m_Layer: 5
   m_Name: CloseBTN
   m_TagString: Untagged
@@ -132,6 +133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3003719922690076870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299931394422638444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
 --- !u!1 &3158130090382668056
 GameObject:
   m_ObjectHideFlags: 0

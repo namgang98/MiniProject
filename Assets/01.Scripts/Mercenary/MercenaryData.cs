@@ -1,10 +1,9 @@
 using System;
-using UnityEngine;
 
 [Serializable]
 public class Mercenary
 {
-    public int uniqueID;
+    public int uniqueID {  get; private set; }
     public string name;
     public int totalStr => str + weapon.str;
     public int totalInt => intel + weapon.intel;

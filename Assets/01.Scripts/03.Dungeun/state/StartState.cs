@@ -1,6 +1,3 @@
-using Unity.VisualScripting;
-using UnityEngine;
-
 public class StartState : BaseState
 {
     public StartState(BattleStateMachin machine, BattleManager manager ) : base(machine, manager) {}

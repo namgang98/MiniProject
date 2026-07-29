@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 public class BattleManager : MonoBehaviour
@@ -15,6 +14,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform[] monsPos;
 
     public bool isBattle;
+    [SerializeField] public GameObject dim;
     private void Awake()
     {
         if (instance == null)

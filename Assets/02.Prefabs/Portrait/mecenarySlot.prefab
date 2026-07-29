@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 2763077187150030819}
   - component: {fileID: 2284861002510466872}
   - component: {fileID: 5929837390805065449}
+  - component: {fileID: 2838347446356341408}
   - component: {fileID: 691535320221313734}
   m_Layer: 5
   m_Name: mecenarySlot
@@ -143,6 +144,18 @@ MonoBehaviour:
   customData: {fileID: 11400000, guid: 1ec998e97e057cd43b1f60869dc68c55, type: 2}
   portaitData: {fileID: 11400000, guid: 47bc1f3ef8578fd4592662d21b273b72, type: 2}
   porpos: {fileID: 7398920408907278949}
+--- !u!114 &2838347446356341408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107670181680424409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
 --- !u!114 &691535320221313734
 MonoBehaviour:
   m_ObjectHideFlags: 0

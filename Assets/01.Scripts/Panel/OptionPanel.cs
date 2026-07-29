@@ -12,24 +12,24 @@ public class OptionPanel : MonoBehaviour
     void Start()
     {
         bgmSlider.onValueChanged.AddListener(BGMVolumeChange);
-       // sfxSlider.onValueChanged.AddListener(SFXVolumeChange);
+        sfxSlider.onValueChanged.AddListener(SFXVolumeChange);
         closeBtn.onClick.AddListener(PopupManager.instance.CloseOptionBtn);
     }
     private void OnEnable()
     {
         bgmSlider.value = SoundManager.instance.GetBgmVolume();
-        //sfxSlider.value = SoundManager.instance.GetSFXvolume();
+        sfxSlider.value = SoundManager.instance.GetSFXVolume();
     }
     
     public void BGMVolumeChange(float vol)
     {
         SoundManager.instance.SetBgmVolume(vol);
     }
-   // public void SFXVolumeChange(float vol)
-   // {
-   //     SoundManager.instance.SetSFXVolume(vol);
-   // }
-   // 
+    public void SFXVolumeChange(float vol)
+    {
+        SoundManager.instance.SetSFXVolume(vol);
+    }
+    
 
 
 }

@@ -7,6 +7,7 @@ public class MenuPanel : MonoBehaviour
     [SerializeField] Button optionBtn;
     [SerializeField] Button merBtn;
     [SerializeField] Button chestBtn;
+    [SerializeField] Button saveBtn;
 
     private void Awake()
     {
@@ -18,6 +19,8 @@ public class MenuPanel : MonoBehaviour
             optionBtn.onClick.AddListener(OpenOption);
         if (closeBtn != null)
             closeBtn.onClick.AddListener(CloseBtn);
+        if (saveBtn != null)
+            saveBtn.onClick.AddListener(SaveGoMain);
     }
 
     public void OpenOption()

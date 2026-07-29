@@ -10,6 +10,10 @@ public class TownPopcontroller : MonoBehaviour
     [SerializeField] Button ShopOUTBtn;
     [SerializeField] Button DungeunOUTBtn;
 
+    [SerializeField] Transform innDoorPos;
+    [SerializeField] Transform ShopDoorPos;
+    [SerializeField] Transform DungeunDoorPos;
+
     [SerializeField] GameObject UIs;
     [SerializeField] GameObject townPanel;
     [SerializeField] GameObject innPanel;
@@ -19,21 +23,29 @@ public class TownPopcontroller : MonoBehaviour
     
     [SerializeField] Canvas enCanvas;
     [SerializeField] Canvas uiCanvas;
-
+    [SerializeField] Camera cam;
+    private void Start()
+    {
+        DotWeenManager.instance.SetCamara(cam);
+    }
     public void InnIN()
     {
-        PanelController(innPanel,townPanel,uiCanvas,enCanvas);
+        DotWeenManager.instance.ZoomIN(innDoorPos,() => PanelController(innPanel, townPanel, uiCanvas, enCanvas));
+        SoundManager.instance.PlaySFX(SFXType.Door);
+        
         SoundManager.instance.PlayBGM(BGMType.innBGM);
     }
     public void InnOUT()
     {
+        SoundManager.instance.PlaySFX(SFXType.Door);
         PanelController(townPanel,innPanel,uiCanvas,enCanvas);
         SoundManager.instance.PlayBGM(BGMType.townBGM);
     }
 
     public void DungeunIN()
     {
-        PanelController(dungeunPanel,townPanel,uiCanvas,enCanvas);
+        DotWeenManager.instance.ZoomIN(DungeunDoorPos,() => PanelController(dungeunPanel, townPanel, uiCanvas, enCanvas));
+       
     }
     public void DungeunOUT()
     {
@@ -41,11 +53,14 @@ public class TownPopcontroller : MonoBehaviour
     }
     public void ShopIN()
     {
-        PanelController(shopPanel,townPanel,uiCanvas,enCanvas);
-        shop.OpenShop();
+        DotWeenManager.instance.ZoomIN(ShopDoorPos,() => PanelController(shopPanel, townPanel, uiCanvas, enCanvas));
+        SoundManager.instance.PlaySFX(SFXType.Door);
+        
+        shop.OpenShop(); 
     }
     public void ShopOUT()
     {
+        SoundManager.instance.PlaySFX(SFXType.Door);
         PanelController(townPanel,shopPanel,uiCanvas,enCanvas);
     }
     public void PanelController(GameObject truepanel, GameObject falsepanel, Canvas uicanvas,Canvas encanvas)

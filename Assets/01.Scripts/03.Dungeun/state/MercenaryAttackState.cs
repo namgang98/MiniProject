@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MercenaryAttackState : BaseState
@@ -15,13 +16,14 @@ public class MercenaryAttackState : BaseState
             return;
         }
 
-        if(skill.atkType == AttackType.Attack)
-        {
-            int dmg = TotalDamage(caster, skill);
-            target.TakeDamage(dmg);
-        }
+        int dmg = TotalDamage(caster, skill);
+        
+
         //공격도트윈으로 모션만들어서 넣기
-        machin.ChangeState(machin.endState);
+        RectTransform attackerRect = caster.GetComponent<RectTransform>();
+        List<BattleUnit> targetect = new() { target};
+        DotWeenManager.instance.AttackMove(caster,targetect,manager.dim,hit: () => { target.TakeDamage(dmg);}, complate: () => machin.ChangeState(machin.endState)
+        );
     }
     public override void Exit()
     {

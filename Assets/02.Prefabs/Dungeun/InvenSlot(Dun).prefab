@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2792707988039330718}
+  - component: {fileID: 1690542416263355987}
   - component: {fileID: 8030493121928176034}
   - component: {fileID: 4212672695051485471}
   - component: {fileID: 967802363720381305}
@@ -39,6 +40,18 @@ RectTransform:
   m_AnchoredPosition: {x: 129.1, y: 71.6}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1690542416263355987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025742591108063047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
 --- !u!114 &8030493121928176034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +69,29 @@ MonoBehaviour:
   item:
     id: 0
     type: 0
+    dropType: 0
     name: 
     icon: {fileID: 0}
     price: 0
     amount: 0
     velue: 0
     spawnChance: 0
+  weapon:
+    uniqueID: 0
+    weaponID: 0
+    weaponiconID: 0
+    name: 
+    grade:
+      grades: 0
+      gradeColor: {r: 0, g: 0, b: 0, a: 0}
+      priceDifference: 0
+      str: 0
+      intel: 0
+      dex: 0
+      skillcount: 0
+    str: 0
+    intel: 0
+    dex: 0
 --- !u!222 &4212672695051485471
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public enum UnitType
 public abstract class BattleUnit : MonoBehaviour
 {
     [SerializeField] GameObject turnMark;
+    public Transform Slot => transform.parent;
     public int Dex { get; protected set; }
     public int INT { get; protected set; }
     public int STR { get; protected set; }

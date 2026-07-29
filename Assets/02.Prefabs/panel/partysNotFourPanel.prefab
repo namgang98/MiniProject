@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 1698643654504924963}
   - component: {fileID: 4552724621299754329}
   - component: {fileID: 8500264311937979672}
+  - component: {fileID: 5934030910764578949}
   m_Layer: 5
   m_Name: NoButton
   m_TagString: Untagged
@@ -495,3 +496,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5934030910764578949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649444329725887979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f23f8cabdb7b540b99c7d53bf76293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonDOTWeen
