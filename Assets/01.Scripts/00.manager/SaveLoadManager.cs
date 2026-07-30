@@ -42,16 +42,13 @@ public class SaveLoadManager : MonoBehaviour
 
         File.WriteAllText(savePath, json);
 
-        Debug.Log(savePath);
     }
 
     public void Load()
     {
         if(File.Exists(savePath) == false)
-        {
-            Debug.Log("세이브파일이없습니다.");
             return;
-        }
+
 
         string json = File.ReadAllText(savePath);
 

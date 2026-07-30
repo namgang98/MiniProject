@@ -17,9 +17,9 @@ public class BattleMercenary : BattleUnit
     {
         Data = mer;
 
-        STR = Data.totalStr;
-        INT = Data.totalInt;
-        Dex = Data.totalDex;
+        STR = Data.TotalStr;
+        INT = Data.TotalInt;
+        Dex = Data.TotalDex;
 
         UnitType = UnitType.Mercenary;
         custom = GetComponent<MercenaryCustomizing>();

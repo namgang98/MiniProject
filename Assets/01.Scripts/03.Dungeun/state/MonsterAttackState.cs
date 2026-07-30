@@ -1,4 +1,3 @@
-using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +17,7 @@ public class MonsterAttackState : BaseState
         }
         List<BattleUnit> targets = GetTargets(skill, target);
         int dmg = skill.damage;
-        DotWeenManager.instance.AttackMove(monster, targets,skill.aniType ,manager.dim, hit: () =>
+        DotWeenManager.instance.AttackMove(monster, targets,skill.aniType ,manager.Dim, hit: () =>
         {
             foreach (BattleUnit unit in targets)
                 unit.TakeDamage(dmg);

@@ -12,6 +12,6 @@ public class NameInfo
 [CreateAssetMenu(fileName = "Name", menuName = "Data/Name")]
 public class NameData : ScriptableObject
 {
-    public List<NameInfo> names = new List<NameInfo>();
+    public List<NameInfo> names = new();
 
 }

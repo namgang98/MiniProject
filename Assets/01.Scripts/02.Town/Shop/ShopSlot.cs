@@ -7,6 +7,7 @@ public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] Transform iconpos;
     [SerializeField] Button selectBtn;
     [SerializeField] ShopPanel shopPanel;
+    [SerializeField] GameObject dim;
     public HaveWeapon weapon;
     public Item item;
     GameObject icon;
@@ -65,12 +66,14 @@ public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void SellClick()
     {
-        SellData data = new();
-
-        data.weapon = weapon;
-        data.item = item;
+        SellData data = new()
+        {
+            weapon = weapon,
+            item = item
+        };
 
         shopPanel.AddSellItem(data);
+        dim.SetActive(true);
     }
 
 

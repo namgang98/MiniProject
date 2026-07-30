@@ -3,11 +3,11 @@ using System;
 [Serializable]
 public class Mercenary
 {
-    public int uniqueID {  get; private set; }
+    public int UniqueID {  get; private set; }
     public string name;
-    public int totalStr => str + weapon.str;
-    public int totalInt => intel + weapon.intel;
-    public int totalDex => dex + weapon.dex;
+    public int TotalStr => str + weapon.str;
+    public int TotalInt => intel + weapon.intel;
+    public int TotalDex => dex + weapon.dex;
 
     public int level;
     public int exp;
@@ -28,7 +28,7 @@ public class Mercenary
 
     public Mercenary(int uniqueID, string name, int str, int intel, int dex, int hairNum, int hairColorNum)
     {
-        this.uniqueID = uniqueID;
+        this.UniqueID = uniqueID;
         this.name = name;
 
         this.level = 1;

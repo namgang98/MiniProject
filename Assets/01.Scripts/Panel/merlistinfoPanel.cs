@@ -41,9 +41,9 @@ public class MerListInfoPanel : MonoBehaviour
         nameText.text = saveData.name;
         lvText.text = saveData.level.ToString();
 
-        totalStrText.text = saveData.totalStr.ToString();
-        totalIntText.text = saveData.totalInt.ToString();
-        totalDexText.text = saveData.totalDex.ToString();
+        totalStrText.text = saveData.TotalStr.ToString();
+        totalIntText.text = saveData.TotalInt.ToString();
+        totalDexText.text = saveData.TotalDex.ToString();
 
         statpointText.text = saveData.statpoint.ToString();
         strText.text = saveData.str.ToString();
@@ -98,7 +98,7 @@ public class MerListInfoPanel : MonoBehaviour
     }
     void UpSTRRefrash()
     {
-        totalStrText.text = saveData.totalStr.ToString();
+        totalStrText.text = saveData.TotalStr.ToString();
         strText.text = saveData.str.ToString();
         statpointText.text = saveData.statpoint.ToString();
     }
@@ -116,7 +116,7 @@ public class MerListInfoPanel : MonoBehaviour
     }
     void UpINTRefrash()
     {
-        totalIntText.text = saveData.totalInt.ToString();
+        totalIntText.text = saveData.TotalInt.ToString();
         intText.text = saveData.intel.ToString();
         statpointText.text = saveData.statpoint.ToString();
     }
@@ -134,7 +134,7 @@ public class MerListInfoPanel : MonoBehaviour
     }
     void UpDEXRefrash()
     {
-        totalDexText.text = saveData.totalDex.ToString();
+        totalDexText.text = saveData.TotalDex.ToString();
         dexText.text = saveData.dex.ToString();
         statpointText.text = saveData.statpoint.ToString();
     }

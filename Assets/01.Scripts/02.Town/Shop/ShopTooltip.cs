@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class ShopTooltip : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class ShopTooltip : MonoBehaviour
     {
         rect = GetComponent<RectTransform>();
         gameObject.SetActive(false);
-
+        TooltipManager.instance.SetToolPop(this);
     }
     public void Open(Item item)
     {

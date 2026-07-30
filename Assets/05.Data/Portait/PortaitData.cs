@@ -11,5 +11,5 @@ public class Portait
 [CreateAssetMenu(fileName = "PortaitData", menuName = "Data/Portait")]
 public class PortaitData : ScriptableObject
 {
-    public List<Portait> Portaits = new List<Portait>();
+    public List<Portait> Portaits = new();
 }

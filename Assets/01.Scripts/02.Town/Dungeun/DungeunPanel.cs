@@ -61,7 +61,7 @@ public class DungeunPanel : MonoBehaviour
         if(MercenaryManager.instance.IsReMoveParty(mer))
         Refresh();
     }
-    public void byemer(Mercenary mer)
+    public void Byemer(Mercenary mer)
     {
         RemoveParty(mer);
         Refresh();

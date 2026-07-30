@@ -64,7 +64,7 @@ public class PopupManager : MonoBehaviour
     #endregion
 
     #region 용병inn고용창 나중에 던전들어갈때 생성된거 파괴하고새로생성코드만들기
-    public void OpenMerInfoPanel(merDatamanger manager)
+    public void OpenMerInfoPanel(MerDatamanger manager)
     {
         merInfoPanel = CreatePanel(merInfoPanel,merInfo);
         OpenPanel(merInfoPanel, uiCanvas, 1);
@@ -125,7 +125,7 @@ public class PopupManager : MonoBehaviour
     {
         ClosePanel(merStatPanel, enCanvas,2);
         merlistpanel.GetComponent<MerListPanel>().Refresh();
-        dungeunPanel.GetComponent<DungeunPanel>().byemer(mer);
+        dungeunPanel.GetComponent<DungeunPanel>().Byemer(mer);
     }
     #endregion
 

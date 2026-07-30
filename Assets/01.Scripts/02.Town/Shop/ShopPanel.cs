@@ -10,14 +10,14 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] ShopSlot[] sellSlots;
     [SerializeField] GameObject sellPanel;
     [SerializeField] SellPanel sell;
-
+    
      List<SellData> sellItem = new();
 
     public int rerollprice = 50;
 
     public List<ShopData> shopDatas = new();
     public void OpenShop()
-    {
+    { 
         if (shopDatas.Count == 0)
             RefreshShop();
         else
@@ -102,13 +102,24 @@ public class ShopPanel : MonoBehaviour
 
         SaveLoadManager.instance.Save();
     }
-    public void AddSellItem(SellData item)
+    public void AddSellItem(SellData data)
     {
-        if(item == null)
+        if (data == null)
+        {
             return;
-        if (sellItem.Contains(item))
-            return;
-        sellItem.Add(item);
+        }
+
+        if (data.weapon != null)
+        {
+            if (sellItem.Exists(x => x.weapon == data.weapon))
+                return;
+        }
+        else if (data.item != null)
+        {
+            if(sellItem.Exists(x=>x.item == data.item))
+                return;
+        }
+        sellItem.Add(data);
 
         RefreshSellUI();
     }

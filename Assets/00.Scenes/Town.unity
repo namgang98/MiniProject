@@ -1072,6 +1072,7 @@ MonoBehaviour:
   iconpos: {fileID: 239248331}
   selectBtn: {fileID: 239248334}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -1670,6 +1671,7 @@ MonoBehaviour:
   iconpos: {fileID: 415731936}
   selectBtn: {fileID: 415731939}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -2111,6 +2113,7 @@ MonoBehaviour:
   iconpos: {fileID: 565082420}
   selectBtn: {fileID: 565082423}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -3110,6 +3113,7 @@ MonoBehaviour:
   iconpos: {fileID: 857809060}
   selectBtn: {fileID: 857809063}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -3573,6 +3577,7 @@ MonoBehaviour:
   iconpos: {fileID: 988398144}
   selectBtn: {fileID: 988398147}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -4056,6 +4061,7 @@ MonoBehaviour:
   iconpos: {fileID: 1025940726}
   selectBtn: {fileID: 1025940729}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -4373,7 +4379,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 100, y: 100}
@@ -5197,6 +5203,7 @@ MonoBehaviour:
   iconpos: {fileID: 1248988996}
   selectBtn: {fileID: 1248988999}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -5650,6 +5657,7 @@ MonoBehaviour:
   iconpos: {fileID: 1282845592}
   selectBtn: {fileID: 1282845595}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -7129,6 +7137,7 @@ MonoBehaviour:
   iconpos: {fileID: 1825264067}
   selectBtn: {fileID: 1825264070}
   shopPanel: {fileID: 1448431812}
+  dim: {fileID: 0}
   weapon:
     uniqueID: 0
     weaponID: 0
@@ -7978,5 +7987,5 @@ SceneRoots:
   - {fileID: 1411174060}
   - {fileID: 170806418}
   - {fileID: 803516076}
-  - {fileID: 754916456}
   - {fileID: 1274976484}
+  - {fileID: 754916456}

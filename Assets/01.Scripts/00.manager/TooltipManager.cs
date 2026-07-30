@@ -13,7 +13,6 @@ public class TooltipManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
     
     public void Open(Item item)
@@ -28,5 +27,8 @@ public class TooltipManager : MonoBehaviour
     { 
         tooltip.Close();
     }
-
+    public void SetToolPop(ShopTooltip tool)
+    {
+        tooltip = tool;
+    }
 }

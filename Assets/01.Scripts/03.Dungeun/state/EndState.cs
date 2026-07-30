@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class EndState : BaseState
 {
     public EndState(BattleStateMachin machine, BattleManager manager) : base(machine, manager)

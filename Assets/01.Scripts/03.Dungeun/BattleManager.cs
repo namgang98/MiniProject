@@ -14,7 +14,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform[] monsPos;
 
     public bool isBattle;
-    [SerializeField] public GameObject dim;
+    [SerializeField] GameObject dim;
+    public GameObject Dim => dim;
+
     private void Awake()
     {
         if (instance == null)

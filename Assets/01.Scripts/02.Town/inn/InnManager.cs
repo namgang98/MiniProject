@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InnManager : MonoBehaviour
 {
@@ -29,7 +28,7 @@ public class InnManager : MonoBehaviour
             GameObject obj = Instantiate(mercenaryPrefab, spawnPos[i], false);
 
             
-            obj.GetComponent<merDatamanger>().SetData(data);
+            obj.GetComponent<MerDatamanger>().SetData(data);
             obj.GetComponent<MercenaryCustomizing>().SetMercenary(data);
         }
     }

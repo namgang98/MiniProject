@@ -14,10 +14,10 @@ public class MerInfoPanel : MonoBehaviour
     public TextMeshProUGUI intText;
     public TextMeshProUGUI dexText;
 
-    private merDatamanger currentManger;
+    private MerDatamanger currentManger;
     private Mercenary currentmerdata;
 
-    public void SetData(merDatamanger manger)
+    public void SetData(MerDatamanger manger)
     {
         currentManger = manger;
         currentmerdata = manger.data;
