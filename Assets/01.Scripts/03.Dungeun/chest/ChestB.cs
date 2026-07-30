@@ -9,7 +9,6 @@ public class ChestB : MonoBehaviour
     [SerializeField] Button Btn;
     [SerializeField] Sprite open;
     [SerializeField] Image chest;
-    bool isOpen;
     private void Start()
     {
        
@@ -18,10 +17,6 @@ public class ChestB : MonoBehaviour
 
     public void OpenChest()
     {
-        if (isOpen)
-            return;
-
-        isOpen = true;
         chest.sprite = open;
 
         DungeunUIManager.instance.OpenChestPop(this);
