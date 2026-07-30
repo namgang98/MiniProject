@@ -26,7 +26,7 @@ public class BattleMonster : BattleUnit
         hpbar.SetGauge(nowHp/maxHp);
     }
 
-    public override void TakeDamage(int dmg)
+    public override void OnTakeDamage(int dmg)
     {
         nowHp -= dmg;
 

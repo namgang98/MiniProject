@@ -44,7 +44,7 @@ public class DotWeenManager : MonoBehaviour
         seq.Append(maincamera.transform.DOMove(camOriginPos, 0.1f));
         seq.Join(maincamera.DOOrthoSize(camOriginSize, 1f));
     }
-    public void AttackMove(BattleUnit attacker, List<BattleUnit> targets, GameObject background, Action hit, Action complate)
+    public void AttackMove(BattleUnit attacker, List<BattleUnit> targets, AttackAniType ani, GameObject background, Action hit, Action complate)
     {
         if (attacker == null || targets == null)
         {
@@ -68,27 +68,50 @@ public class DotWeenManager : MonoBehaviour
         attacker.Slot.SetAsLastSibling();
 
 
-        float offsetX = (attackerRect.anchoredPosition.x < targetRect.anchoredPosition.x) ? -60f : 60f;
-        Vector2 targetPos = new Vector2(targetRect.anchoredPosition.x + offsetX, targetRect.anchoredPosition.y);
+        float offsetX = 0;
 
-        Animator ani = attacker.GetComponentInChildren<Animator>();
+        if (attacker.UnitType == UnitType.Mercenary)
+            offsetX = 80f;
+        else
+            offsetX = -80f;
+
+        Vector2 targetPos = new(targetRect.anchoredPosition.x + offsetX, targetRect.anchoredPosition.y);
+       
+        Animator atk = attacker.GetComponentInChildren<Animator>();
         Sequence seq = DOTween.Sequence();
 
         seq.Append(attackerRect.DOAnchorPos(targetPos, 0.2f).SetEase(Ease.OutCubic));
-
-        seq.AppendCallback(() => ani.SetBool("attack", true));
-        
+        switch (ani)
+        {
+            case AttackAniType.attack:
+            seq.AppendCallback(() => atk.SetBool("attack", true));
+            break;
+            case AttackAniType.skill:
+            seq.AppendCallback(() => atk.SetBool("skill", true));
+            break;
+        }
+   
         seq.AppendInterval(0.3f);
         seq.AppendCallback(() =>
         {
              hit?.Invoke();
              foreach (var target in targets)
-                   {
-                      targetRect.DOShakeAnchorPos(0.2f, strength: 15, vibrato: 20);
-                   }
+             {
+                RectTransform rect = target.GetComponent<RectTransform>();
+                rect.DOShakeAnchorPos(0.2f, strength: 15, vibrato: 20);
+                
+             }
         });
         seq.AppendInterval(0.3f);
-        seq.AppendCallback(() => ani.SetBool("attack", false));
+        switch (ani)
+        {
+            case AttackAniType.attack:
+                seq.AppendCallback(() => atk.SetBool("attack", false));
+                break;
+            case AttackAniType.skill:
+                seq.AppendCallback(() => atk.SetBool("skill", false));
+                break;
+        }
 
         seq.Append(attackerRect.DOAnchorPos(originPos, 0.2f).SetEase(Ease.OutCubic));
 
@@ -101,7 +124,6 @@ public class DotWeenManager : MonoBehaviour
         });
 
     }
-
     public void SetCamara(Camera cam)
     {
         maincamera = cam;

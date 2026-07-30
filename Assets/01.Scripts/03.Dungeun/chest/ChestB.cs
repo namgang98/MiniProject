@@ -7,14 +7,23 @@ public class ChestB : MonoBehaviour
     public Chest Data { get; private set; }
     public List<int> itemIDs = new();
     [SerializeField] Button Btn;
-
+    [SerializeField] Sprite open;
+    [SerializeField] Image chest;
+    bool isOpen;
     private void Start()
     {
+       
         Btn.onClick.AddListener(OpenChest);
     }
 
     public void OpenChest()
     {
+        if (isOpen)
+            return;
+
+        isOpen = true;
+        chest.sprite = open;
+
         DungeunUIManager.instance.OpenChestPop(this);
 
     }

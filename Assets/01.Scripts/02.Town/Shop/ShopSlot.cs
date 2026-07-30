@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ShopSlot : MonoBehaviour
-{
+public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
+{ 
     [SerializeField] Transform iconpos;
     [SerializeField] Button selectBtn;
     [SerializeField] ShopPanel shopPanel;
@@ -71,4 +72,22 @@ public class ShopSlot : MonoBehaviour
 
         shopPanel.AddSellItem(data);
     }
+
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item == null)
+            return;
+
+        if (weapon != null)
+            TooltipManager.instance.Open(weapon);
+        else
+            TooltipManager.instance.Open(item);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        TooltipManager.instance.Close();
+    }
+
+
 }

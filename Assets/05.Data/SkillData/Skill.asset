@@ -21,6 +21,7 @@ MonoBehaviour:
     effectType: 0
     targetType: 3
     posType: 0
+    aniType: 0
   - id: 102
     name: Piercing Thrust
     damage: 8
@@ -29,6 +30,7 @@ MonoBehaviour:
     effectType: 0
     targetType: 3
     posType: 0
+    aniType: 0
   - id: 103
     name: Crescent Slash
     damage: 20
@@ -37,6 +39,7 @@ MonoBehaviour:
     effectType: 0
     targetType: 3
     posType: 1
+    aniType: 0
   - id: 104
     name: Tempest Strike
     damage: 999
@@ -45,6 +48,7 @@ MonoBehaviour:
     effectType: 0
     targetType: 4
     posType: 1
+    aniType: 0
   - id: 501
     name: Melee Attack
     damage: 10
@@ -53,6 +57,7 @@ MonoBehaviour:
     effectType: 0
     targetType: 3
     posType: 0
+    aniType: 0
   - id: 502
     name: Poison Sprite
     damage: 3
@@ -61,3 +66,4 @@ MonoBehaviour:
     effectType: 1
     targetType: 3
     posType: 1
+    aniType: 1

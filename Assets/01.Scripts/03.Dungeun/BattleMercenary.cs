@@ -28,8 +28,9 @@ public class BattleMercenary : BattleUnit
 
         hpBar.SetGauge(Data.hp/Data.maxHp);
     }
-    public override void TakeDamage(int dmg)
+    public override void OnTakeDamage(int dmg)
     {
+        
         Data.hp -= dmg;
 
         if(Data.hp < 0)

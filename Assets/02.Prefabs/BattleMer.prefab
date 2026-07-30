@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2906586134216970298}
+  - component: {fileID: 3450928942675344175}
   m_Layer: 5
   m_Name: Customiz
   m_TagString: Untagged
@@ -112,6 +113,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 3.1399}
   m_SizeDelta: {x: 100, y: 106.2797}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3450928942675344175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281893233082483213}
+  m_CullTransparentMesh: 1
 --- !u!1 &2461020833249958168
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleMercenary
   turnMark: {fileID: 5384337889173709153}
+  bodyimage:
+  - {fileID: 1323721153023854807}
+  - {fileID: 3157337106302044734}
   skillPanel: {fileID: 0}
   hpBar: {fileID: 8042085054012743494}
   custom: {fileID: 159195835291623592}

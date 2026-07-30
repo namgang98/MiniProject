@@ -22,7 +22,7 @@ public class MercenaryAttackState : BaseState
         //공격도트윈으로 모션만들어서 넣기
         RectTransform attackerRect = caster.GetComponent<RectTransform>();
         List<BattleUnit> targetect = new() { target};
-        DotWeenManager.instance.AttackMove(caster,targetect,manager.dim,hit: () => { target.TakeDamage(dmg);}, complate: () => machin.ChangeState(machin.endState)
+        DotWeenManager.instance.AttackMove(caster,targetect,skill.aniType,manager.dim,hit: () => { target.TakeDamage(dmg);}, complate: () => machin.ChangeState(machin.endState)
         );
     }
     public override void Exit()

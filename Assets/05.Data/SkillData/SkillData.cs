@@ -30,6 +30,11 @@ public enum TargetPosType
     Front,
     All
 }
+public enum AttackAniType
+{
+    attack,
+    skill
+}
 [Serializable]
 public class Skill
 {
@@ -42,6 +47,7 @@ public class Skill
     public EffectType effectType;
     public TargetType targetType;
     public TargetPosType posType;
+    public AttackAniType aniType;
 }
 [CreateAssetMenu(fileName = "Skill", menuName = "Data/Skill")]
 public class SkillData : ScriptableObject

@@ -92,6 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChestB
   itemIDs: 
   Btn: {fileID: 994058173526569504}
+  open: {fileID: -6834524911116659543, guid: d1504ed0f4b55b44683daddfde2245e9, type: 3}
+  chest: {fileID: 8267649922505097526}
 --- !u!114 &994058173526569504
 MonoBehaviour:
   m_ObjectHideFlags: 0

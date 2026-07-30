@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,13 +18,18 @@ public class MonsterAttackState : BaseState
         }
         List<BattleUnit> targets = GetTargets(skill, target);
         int dmg = skill.damage;
-
-        foreach(BattleUnit unit in targets)
+        DotWeenManager.instance.AttackMove(monster, targets,skill.aniType ,manager.dim, hit: () =>
         {
-            unit.TakeDamage(dmg);
-        }
-
-        machin.ChangeState(machin.endState);
+            foreach (BattleUnit unit in targets)
+                unit.TakeDamage(dmg);
+        },
+        complate: () => {
+        { machin.ChangeState(machin.endState); }
+            
+            
+        });
+        
+        
     }
     public override void Exit()
     {
