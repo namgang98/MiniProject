@@ -13,19 +13,19 @@ public class SellPanel : MonoBehaviour
     }
     public void Open()
     {
-       RefreshUI();
+        RefreshUI();
     }
     public void RefreshUI()
     {
         Clear();
 
-        foreach(var weapon in InventoryManager.instance.weapons)
+        foreach (var weapon in InventoryManager.instance.weapons)
         {
-            ShopSlot slot = Instantiate(slotPrefab,content);
+            ShopSlot slot = Instantiate(slotPrefab, content);
             slot.SetWeaponicon(weapon);
             slot.SetPanel(shopPanel);
         }
-        foreach(var id in InventoryManager.instance.items)
+        foreach (var id in InventoryManager.instance.items)
         {
             ShopSlot slot = Instantiate(slotPrefab, content);
             slot.SetItems(id);
@@ -40,11 +40,12 @@ public class SellPanel : MonoBehaviour
     }
     public void Clear()
     {
-        foreach(Transform child in content)
+        foreach (Transform child in content)
         {
             Destroy(child.gameObject);
         }
     }
+
 }
 [Serializable]
 public class SellData

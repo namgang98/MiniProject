@@ -176,6 +176,12 @@ public class ShopPanel : MonoBehaviour
         SaveLoadManager.instance.Save();
         sellPanel.SetActive(false);
     }
+    public void Close()
+    {
+        RefreshSellUI();
+        sell.RefreshUI();
+        sellPanel.SetActive(false);
+    }
     public void RemoveSellItem(SellData data)
     {
         sellItem.Remove(data);
