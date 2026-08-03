@@ -51,6 +51,9 @@ public class InventoryManager : MonoBehaviour
             weapons.Add(mer.weapon);
         weapons.Remove(weapon);
         mer.weapon = weapon;
+
+        SelectWeapon = null;
+
         SaveLoadManager.instance.Save();
     }
     public void SetSelectItem(Item item)

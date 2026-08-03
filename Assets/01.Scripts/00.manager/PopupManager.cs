@@ -194,7 +194,7 @@ public class PopupManager : MonoBehaviour
         SetDimPos(i);
         panel.transform.SetAsLastSibling();
     }
-    public void ClosePanel(GameObject panel, Canvas canvas,int i) // 처음여는 팝업일경우 3 그다음 켜는팝업 2
+    public void ClosePanel(GameObject panel, Canvas canvas,int i) // 처음여는 팝업일경우 3 그다음 켜지는 팝업 2
     {
         panel.SetActive(false);
         ChangeParent(panel, canvas);

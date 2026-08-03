@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166.85999, y: -63.958008}
+  m_AnchoredPosition: {x: -49.4, y: 125.3}
   m_SizeDelta: {x: 71.965, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8510630761093475892
@@ -588,5 +588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleMonster
   turnMark: {fileID: 3263725810692044802}
+  bodyimage: []
   btn: {fileID: 2696542365505120669}
   hpbar: {fileID: 5544369451765904116}
